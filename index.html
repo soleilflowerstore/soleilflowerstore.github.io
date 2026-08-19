@@ -7,428 +7,418 @@
 <title>Soleil Flower Store | Dangwa Manila</title>
 
 <style>
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+*{
+box-sizing:border-box;
+margin:0;
+padding:0;
 }
 
-html {
-    scroll-behavior: smooth;
+html{
+scroll-behavior:smooth;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    background: #fff9fb;
-    color: #5c4149;
-    line-height: 1.6;
+body{
+font-family:Arial,sans-serif;
+background:#fff9fb;
+color:#5c4149;
+line-height:1.6;
 }
 
-header {
-    background: #fff0f5;
-    padding: 20px 15px;
-    text-align: center;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 15px rgba(120,70,85,.08);
+header{
+background:#fff0f5;
+padding:20px 15px;
+text-align:center;
+position:sticky;
+top:0;
+z-index:1000;
+box-shadow:0 2px 15px rgba(120,70,85,.08);
 }
 
-.logo {
-    font-family: Georgia, serif;
-    font-size: 30px;
-    color: #91465e;
-    letter-spacing: 1px;
+.logo{
+font-family:Georgia,serif;
+font-size:30px;
+color:#91465e;
+letter-spacing:1px;
 }
 
-.tagline {
-    font-family: Georgia, serif;
-    font-style: italic;
-    color: #ad6a7f;
-    font-size: 13px;
+.tagline{
+font-family:Georgia,serif;
+font-style:italic;
+color:#ad6a7f;
+font-size:13px;
 }
 
-nav {
-    margin-top: 12px;
+nav{
+margin-top:12px;
 }
 
-nav a {
-    color: #684750;
-    text-decoration: none;
-    margin: 0 6px;
-    font-size: 13px;
+nav a{
+color:#684750;
+text-decoration:none;
+margin:0 6px;
+font-size:13px;
 }
 
-nav a:hover {
-    color: #c25d7c;
+nav a:hover{
+color:#c25d7c;
 }
 
-.hero {
-    min-height: 500px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 70px 20px;
-    background:
-        radial-gradient(circle at top left,#ffe2ec,transparent 35%),
-        radial-gradient(circle at bottom right,#f8dce8,transparent 35%),
-        #fff9fb;
+.hero{
+min-height:500px;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:70px 20px;
+background:
+radial-gradient(circle at top left,#ffe2ec,transparent 35%),
+radial-gradient(circle at bottom right,#f8dce8,transparent 35%),
+#fff9fb;
 }
 
-.hero-content {
-    max-width: 760px;
+.hero-content{
+max-width:760px;
 }
 
-.hero-small {
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    font-size: 13px;
-    color: #b35d76;
-    margin-bottom: 15px;
+.hero-small{
+text-transform:uppercase;
+letter-spacing:3px;
+font-size:13px;
+color:#b35d76;
+margin-bottom:15px;
 }
 
-.hero h1 {
-    font-family: Georgia, serif;
-    font-size: 50px;
-    font-weight: normal;
-    color: #8e465e;
-    line-height: 1.15;
-    margin-bottom: 20px;
+.hero h1{
+font-family:Georgia,serif;
+font-size:50px;
+font-weight:normal;
+color:#8e465e;
+line-height:1.15;
+margin-bottom:20px;
 }
 
-.hero p {
-    font-size: 16px;
-    max-width: 650px;
-    margin: auto;
+.hero p{
+font-size:16px;
+max-width:650px;
+margin:auto;
 }
 
-.btn {
-    display: inline-block;
-    background: #b95d79;
-    color: white;
-    border: none;
-    border-radius: 30px;
-    padding: 12px 23px;
-    margin: 6px;
-    text-decoration: none;
-    cursor: pointer;
-    font-size: 14px;
-    transition: .25s;
+.btn{
+display:inline-block;
+background:#b95d79;
+color:white;
+border:none;
+border-radius:30px;
+padding:12px 23px;
+margin:6px;
+text-decoration:none;
+cursor:pointer;
+font-size:14px;
+transition:.25s;
 }
 
-.btn:hover {
-    background: #8e465e;
-    transform: translateY(-2px);
+.btn:hover{
+background:#8e465e;
+transform:translateY(-2px);
 }
 
-.btn-light {
-    background: #f5d1dc;
-    color: #7c4053;
+.btn-light{
+background:#f5d1dc;
+color:#7c4053;
 }
 
-.btn-light:hover {
-    background: #e9b9c9;
+.section{
+max-width:1150px;
+margin:auto;
+padding:70px 20px;
 }
 
-.section {
-    max-width: 1150px;
-    margin: auto;
-    padding: 70px 20px;
+.section-title{
+text-align:center;
+margin-bottom:40px;
 }
 
-.section-title {
-    text-align: center;
-    margin-bottom: 40px;
+.section-title span{
+text-transform:uppercase;
+letter-spacing:3px;
+font-size:12px;
+color:#b35d76;
 }
 
-.section-title span {
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    font-size: 12px;
-    color: #b35d76;
+.section-title h2{
+font-family:Georgia,serif;
+font-size:38px;
+font-weight:normal;
+color:#8e465e;
 }
 
-.section-title h2 {
-    font-family: Georgia, serif;
-    font-size: 38px;
-    font-weight: normal;
-    color: #8e465e;
+.products{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
 }
 
-.products {
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 20px;
+.product{
+background:linear-gradient(145deg,#fff0f5,#fce2eb);
+border:1px solid #f1ccd8;
+border-radius:24px;
+padding:30px 18px;
+text-align:center;
+min-height:245px;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+box-shadow:0 8px 25px rgba(137,73,92,.07);
+transition:.25s;
 }
 
-.product {
-    background: linear-gradient(145deg,#fff0f5,#fce2eb);
-    border: 1px solid #f1ccd8;
-    border-radius: 24px;
-    padding: 30px 18px;
-    text-align: center;
-    min-height: 245px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 8px 25px rgba(137,73,92,.07);
-    transition: .25s;
+.product:nth-child(3n+2){
+background:linear-gradient(145deg,#fff7ed,#fcebdc);
 }
 
-.product:nth-child(3n+2) {
-    background: linear-gradient(145deg,#fff7ed,#fcebdc);
+.product:nth-child(3n){
+background:linear-gradient(145deg,#fff4f7,#f6e5ee);
 }
 
-.product:nth-child(3n) {
-    background: linear-gradient(145deg,#fff4f7,#f6e5ee);
+.product:hover{
+transform:translateY(-5px);
 }
 
-.product:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 14px 30px rgba(137,73,92,.12);
+.flower-symbol{
+font-size:34px;
+margin-bottom:8px;
 }
 
-.flower-symbol {
-    font-size: 34px;
-    margin-bottom: 8px;
+.product h3{
+font-family:Georgia,serif;
+font-size:25px;
+font-weight:normal;
+color:#8e465e;
 }
 
-.product h3 {
-    font-family: Georgia, serif;
-    font-size: 25px;
-    font-weight: normal;
-    color: #8e465e;
+.product p{
+font-size:13px;
+max-width:270px;
+margin:8px auto;
+color:#765861;
 }
 
-.product p {
-    font-size: 13px;
-    max-width: 270px;
-    margin: 8px auto;
-    color: #765861;
+.inquiry-box{
+background:white;
+max-width:850px;
+margin:auto;
+padding:32px;
+border-radius:25px;
+box-shadow:0 8px 30px rgba(137,73,92,.09);
 }
 
-.inquiry-box {
-    background: white;
-    max-width: 850px;
-    margin: auto;
-    padding: 32px;
-    border-radius: 25px;
-    box-shadow: 0 8px 30px rgba(137,73,92,.09);
+.form-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:15px;
 }
 
-.form-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 15px;
+.full{
+grid-column:1/-1;
 }
 
-.full {
-    grid-column: 1 / -1;
+label{
+display:block;
+font-size:13px;
+font-weight:bold;
+margin-bottom:6px;
+color:#684750;
 }
 
-label {
-    display: block;
-    font-size: 13px;
-    font-weight: bold;
-    margin-bottom: 6px;
-    color: #684750;
+input,select,textarea{
+width:100%;
+padding:12px;
+border:1px solid #e5c2ce;
+border-radius:11px;
+background:#fffafb;
+color:#5c4149;
+font-size:14px;
+outline:none;
 }
 
-input,
-select,
-textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #e5c2ce;
-    border-radius: 11px;
-    background: #fffafb;
-    color: #5c4149;
-    font-size: 14px;
-    outline: none;
+textarea{
+min-height:100px;
+resize:vertical;
 }
 
-input:focus,
-select:focus,
-textarea:focus {
-    border-color: #c66b87;
+.custom-options{
+background:#fff4f7;
+border-radius:18px;
+padding:20px;
+margin-top:20px;
 }
 
-textarea {
-    min-height: 100px;
-    resize: vertical;
+.custom-options h3{
+font-family:Georgia,serif;
+font-weight:normal;
+color:#8e465e;
+margin-bottom:15px;
 }
 
-.custom-options {
-    background: #fff4f7;
-    border-radius: 18px;
-    padding: 20px;
-    margin-top: 20px;
+.option-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:15px;
 }
 
-.custom-options h3 {
-    font-family: Georgia, serif;
-    font-weight: normal;
-    color: #8e465e;
-    margin-bottom: 15px;
+.cart-box{
+background:#fff0f5;
+border-radius:20px;
+padding:20px;
+margin-top:25px;
 }
 
-.option-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 15px;
+.cart-box h3{
+font-family:Georgia,serif;
+font-weight:normal;
+color:#8e465e;
 }
 
-.cart-box {
-    background: #fff0f5;
-    border-radius: 20px;
-    padding: 20px;
-    margin-top: 25px;
+.cart-item{
+background:white;
+border-radius:12px;
+padding:12px;
+margin-top:10px;
+font-size:14px;
 }
 
-.cart-box h3 {
-    font-family: Georgia, serif;
-    font-weight: normal;
-    color: #8e465e;
+.cart-item button{
+float:right;
+border:none;
+background:none;
+color:#a54e68;
+cursor:pointer;
 }
 
-.cart-item {
-    background: white;
-    border-radius: 12px;
-    padding: 12px;
-    margin-top: 10px;
-    font-size: 14px;
+.empty{
+color:#876b74;
+font-size:13px;
 }
 
-.cart-item button {
-    float: right;
-    border: none;
-    background: none;
-    color: #a54e68;
-    cursor: pointer;
+.summary{
+background:#fffafc;
+border:1px dashed #d9a9b8;
+border-radius:15px;
+padding:18px;
+margin-top:20px;
+display:none;
 }
 
-.empty {
-    color: #876b74;
-    font-size: 13px;
+.summary h3{
+font-family:Georgia,serif;
+color:#8e465e;
+font-weight:normal;
 }
 
-.summary {
-    background: #fffafc;
-    border: 1px dashed #d9a9b8;
-    border-radius: 15px;
-    padding: 18px;
-    margin-top: 20px;
-    display: none;
+.info{
+background:#fce6ee;
+border-radius:25px;
+padding:35px;
+text-align:center;
 }
 
-.summary h3 {
-    font-family: Georgia, serif;
-    color: #8e465e;
-    font-weight: normal;
+.info p{
+margin:10px;
 }
 
-.info {
-    background: #fce6ee;
-    border-radius: 25px;
-    padding: 35px;
-    text-align: center;
+.contact-box{
+text-align:center;
+background:linear-gradient(145deg,#fce3ec,#fff1f5);
+border-radius:25px;
+padding:40px 20px;
 }
 
-.info p {
-    margin: 10px;
+footer{
+background:#8e465e;
+color:white;
+text-align:center;
+padding:30px 20px;
 }
 
-.contact-box {
-    text-align: center;
-    background: linear-gradient(145deg,#fce3ec,#fff1f5);
-    border-radius: 25px;
-    padding: 40px 20px;
+footer p{
+margin:5px;
+font-size:13px;
 }
 
-footer {
-    background: #8e465e;
-    color: white;
-    text-align: center;
-    padding: 30px 20px;
+.note{
+text-align:center;
+color:#866a73;
+font-size:13px;
+margin-top:10px;
 }
 
-footer p {
-    margin: 5px;
-    font-size: 13px;
+@media(max-width:750px){
+
+.hero h1{
+font-size:39px;
 }
 
-.note {
-    text-align: center;
-    color: #866a73;
-    font-size: 13px;
-    margin-top: 10px;
+.products{
+grid-template-columns:repeat(2,1fr);
 }
 
-@media(max-width:750px) {
-    .hero h1 {
-        font-size: 39px;
-    }
-
-    .products {
-        grid-template-columns: repeat(2,1fr);
-    }
-
-    .form-grid,
-    .option-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .full {
-        grid-column: auto;
-    }
+.form-grid,.option-grid{
+grid-template-columns:1fr;
 }
 
-@media(max-width:480px) {
-    .logo {
-        font-size: 25px;
-    }
+.full{
+grid-column:auto;
+}
 
-    nav a {
-        font-size: 11px;
-        margin: 0 3px;
-    }
+}
 
-    .hero h1 {
-        font-size: 34px;
-    }
+@media(max-width:480px){
 
-    .products {
-        grid-template-columns: 1fr 1fr;
-        gap: 12px;
-    }
+.logo{
+font-size:25px;
+}
 
-    .product {
-        min-height: 205px;
-        padding: 20px 10px;
-    }
+nav a{
+font-size:11px;
+margin:0 3px;
+}
 
-    .product h3 {
-        font-size: 19px;
-    }
+.hero h1{
+font-size:34px;
+}
 
-    .product p {
-        font-size: 11px;
-    }
+.products{
+grid-template-columns:1fr 1fr;
+gap:12px;
+}
 
-    .flower-symbol {
-        font-size: 27px;
-    }
+.product{
+min-height:205px;
+padding:20px 10px;
+}
 
-    .product .btn {
-        font-size: 11px;
-        padding: 9px 13px;
-    }
+.product h3{
+font-size:19px;
+}
 
-    .inquiry-box {
-        padding: 20px 15px;
-    }
+.product p{
+font-size:11px;
+}
+
+.flower-symbol{
+font-size:27px;
+}
+
+.product .btn{
+font-size:11px;
+padding:9px 13px;
+}
+
+.inquiry-box{
+padding:20px 15px;
+}
+
 }
 </style>
 </head>
@@ -439,7 +429,9 @@ footer p {
 
 <div class="logo">Soleil Flower Store</div>
 
-<div class="tagline">flowers made with love</div>
+<div class="tagline">
+flowers made with love
+</div>
 
 <nav>
 <a href="#home">Home</a>
@@ -487,7 +479,7 @@ Start an Inquiry 💌
 
 <a
 class="btn btn-light"
-href="https://www.facebook.com/share/1LmTdvJTVe/?mibextid=wwXIfr"
+href="https://m.me/soleilflowerstore"
 target="_blank"
 >
 💬 Messenger
@@ -501,9 +493,15 @@ target="_blank"
 <section class="section" id="flowers">
 
 <div class="section-title">
+
 <span>Our Collection</span>
-<h2>Flowers & Arrangements</h2>
+
+<h2>
+Flowers & Arrangements
+</h2>
+
 </div>
+
 
 <div class="products">
 
@@ -511,7 +509,7 @@ target="_blank"
 <div class="product">
 <div class="flower-symbol">🌷</div>
 <h3>Tulips</h3>
-<p>Elegant and delicate blooms for beautiful moments.</p>
+<p>Elegant and delicate blooms.</p>
 <button class="btn" onclick="chooseFlower('Tulips')">Choose</button>
 </div>
 
@@ -519,7 +517,7 @@ target="_blank"
 <div class="product">
 <div class="flower-symbol">🌸</div>
 <h3>Carnation</h3>
-<p>Lovely blooms perfect for thoughtful gifts.</p>
+<p>Lovely blooms for thoughtful gifts.</p>
 <button class="btn" onclick="chooseFlower('Carnation')">Choose</button>
 </div>
 
@@ -551,7 +549,7 @@ target="_blank"
 <div class="product">
 <div class="flower-symbol">🌸</div>
 <h3>Peonies</h3>
-<p>Soft and romantic blooms for special occasions.</p>
+<p>Soft and romantic blooms.</p>
 <button class="btn" onclick="chooseFlower('Peonies')">Choose</button>
 </div>
 
@@ -559,7 +557,7 @@ target="_blank"
 <div class="product">
 <div class="flower-symbol">🌼</div>
 <h3>Gerbera</h3>
-<p>Bright and cheerful flowers for joyful celebrations.</p>
+<p>Bright and cheerful flowers.</p>
 <button class="btn" onclick="chooseFlower('Gerbera')">Choose</button>
 </div>
 
@@ -575,7 +573,7 @@ target="_blank"
 <div class="product">
 <div class="flower-symbol">🌻</div>
 <h3>Sunflower</h3>
-<p>Bright and cheerful flowers full of warmth.</p>
+<p>Bright flowers full of warmth.</p>
 <button class="btn" onclick="chooseFlower('Sunflower')">Choose</button>
 </div>
 
@@ -583,7 +581,7 @@ target="_blank"
 <div class="product">
 <div class="flower-symbol">🤍</div>
 <h3>Dried Flowers</h3>
-<p>Timeless arrangements with a natural aesthetic.</p>
+<p>Timeless natural arrangements.</p>
 <button class="btn" onclick="chooseFlower('Dried Flowers')">Choose</button>
 </div>
 
@@ -591,7 +589,7 @@ target="_blank"
 <div class="product">
 <div class="flower-symbol">🌿</div>
 <h3>Fillers</h3>
-<p>Beautiful fillers and greenery for your bouquet.</p>
+<p>Beautiful fillers and greenery.</p>
 <button class="btn" onclick="chooseFlower('Fillers')">Choose</button>
 </div>
 
@@ -599,7 +597,7 @@ target="_blank"
 <div class="product">
 <div class="flower-symbol">💐</div>
 <h3>Custom Bouquets</h3>
-<p>Create a bouquet based on your preferred style.</p>
+<p>Create a bouquet based on your style.</p>
 <button class="btn" onclick="chooseFlower('Custom Bouquets')">Customize</button>
 </div>
 
@@ -607,7 +605,7 @@ target="_blank"
 <div class="product">
 <div class="flower-symbol">👰</div>
 <h3>Wedding Bouquet</h3>
-<p>Elegant flowers for your special wedding day.</p>
+<p>Elegant flowers for your wedding day.</p>
 <button class="btn" onclick="chooseFlower('Wedding Bouquet')">Choose</button>
 </div>
 
@@ -635,8 +633,13 @@ target="_blank"
 <section class="section" id="services">
 
 <div class="section-title">
+
 <span>What We Offer</span>
-<h2>Our Services</h2>
+
+<h2>
+Our Services
+</h2>
+
 </div>
 
 <div class="info">
@@ -657,15 +660,25 @@ target="_blank"
 <section class="section" id="inquiry">
 
 <div class="section-title">
+
 <span>Online Inquiry</span>
-<h2>Create Your Flower Request</h2>
+
+<h2>
+Create Your Flower Request
+</h2>
+
 </div>
+
 
 <div class="inquiry-box">
 
 <p class="note">
+
 🌸 Flower prices and availability change regularly.
-No fixed prices are displayed. We'll confirm the current price with you.
+
+No fixed prices are displayed.
+We'll confirm the current price with you.
+
 </p>
 
 
@@ -673,10 +686,17 @@ No fixed prices are displayed. We'll confirm the current price with you.
 
 
 <div>
-<label>Flower / Arrangement</label>
+
+<label>
+Flower / Arrangement
+</label>
 
 <select id="flower">
-<option value="">Select a flower</option>
+
+<option value="">
+Select a flower
+</option>
+
 <option>Tulips</option>
 <option>Carnation</option>
 <option>Stargazer</option>
@@ -692,13 +712,17 @@ No fixed prices are displayed. We'll confirm the current price with you.
 <option>Wedding Bouquet</option>
 <option>Sympathy Flowers</option>
 <option>Funeral Flowers</option>
+
 </select>
 
 </div>
 
 
 <div>
-<label>Quantity / Stems</label>
+
+<label>
+Quantity / Stems
+</label>
 
 <input
 id="quantity"
@@ -715,15 +739,26 @@ placeholder="Example: 12"
 
 <div class="custom-options">
 
-<h3>Customize Your Flowers</h3>
+<h3>
+Customize Your Flowers
+</h3>
+
 
 <div class="option-grid">
 
+
 <div>
-<label>Flower Color</label>
+
+<label>
+Flower Color
+</label>
 
 <select id="color">
-<option>Any / Let florist choose</option>
+
+<option>
+Any / Let florist choose
+</option>
+
 <option>Red</option>
 <option>Pink</option>
 <option>White</option>
@@ -732,15 +767,24 @@ placeholder="Example: 12"
 <option>Purple</option>
 <option>Blue</option>
 <option>Mixed Colors</option>
+
 </select>
+
 </div>
 
 
 <div>
-<label>Wrapper Color</label>
+
+<label>
+Wrapper Color
+</label>
 
 <select id="wrapper">
-<option>Any / Let florist choose</option>
+
+<option>
+Any / Let florist choose
+</option>
+
 <option>White</option>
 <option>Pink</option>
 <option>Red</option>
@@ -749,15 +793,24 @@ placeholder="Example: 12"
 <option>Beige</option>
 <option>Pastel</option>
 <option>Mixed</option>
+
 </select>
+
 </div>
 
 
 <div>
-<label>Ribbon Color</label>
+
+<label>
+Ribbon Color
+</label>
 
 <select id="ribbon">
-<option>Any / Let florist choose</option>
+
+<option>
+Any / Let florist choose
+</option>
+
 <option>White</option>
 <option>Pink</option>
 <option>Red</option>
@@ -765,14 +818,20 @@ placeholder="Example: 12"
 <option>Gold</option>
 <option>Silver</option>
 <option>Beige</option>
+
 </select>
+
 </div>
 
 
 <div>
-<label>Occasion</label>
+
+<label>
+Occasion
+</label>
 
 <select id="occasion">
+
 <option>Just Because</option>
 <option>Birthday</option>
 <option>Anniversary</option>
@@ -785,7 +844,9 @@ placeholder="Example: 12"
 <option>Sympathy</option>
 <option>Funeral</option>
 <option>Other</option>
+
 </select>
+
 </div>
 
 </div>
@@ -795,7 +856,9 @@ placeholder="Example: 12"
 
 <div style="margin-top:20px;">
 
-<label>Card / Message</label>
+<label>
+Card / Message
+</label>
 
 <textarea
 id="cardMessage"
@@ -807,11 +870,13 @@ placeholder="Write the message you want on the card..."
 
 <div style="margin-top:15px;">
 
-<label>Special Requests</label>
+<label>
+Special Requests
+</label>
 
 <textarea
 id="specialRequest"
-placeholder="Example: I want a soft romantic style, lots of fillers, minimalist wrapper, etc."
+placeholder="Example: romantic style, minimalist wrapper, lots of fillers..."
 ></textarea>
 
 </div>
@@ -846,7 +911,9 @@ Your inquiry cart is empty.
 <div style="margin-top:30px;">
 
 <h3 style="font-family:Georgia,serif;color:#8e465e;font-weight:normal;">
+
 Delivery Details
+
 </h3>
 
 </div>
@@ -856,113 +923,163 @@ Delivery Details
 
 
 <div>
-<label>Your Full Name</label>
+
+<label>
+Your Full Name
+</label>
 
 <input
 id="customerName"
 type="text"
 placeholder="Full name"
 >
+
 </div>
 
 
 <div>
-<label>Contact Number</label>
+
+<label>
+Contact Number
+</label>
 
 <input
 id="customerPhone"
 type="tel"
 placeholder="09XXXXXXXXX"
 >
+
 </div>
 
 
 <div>
-<label>Order Type</label>
+
+<label>
+Order Type
+</label>
 
 <select id="orderType">
-<option>Pickup</option>
-<option>Delivery</option>
+
+<option>
+Pickup
+</option>
+
+<option>
+Delivery
+</option>
+
 </select>
+
 </div>
 
 
 <div>
-<label>Delivery Service</label>
+
+<label>
+Delivery Service
+</label>
 
 <select id="deliveryService">
-<option>Not applicable - Pickup</option>
-<option>Lalamove</option>
-<option>GrabExpress</option>
+
+<option>
+Not applicable - Pickup
+</option>
+
+<option>
+Lalamove
+</option>
+
+<option>
+GrabExpress
+</option>
+
 </select>
+
 </div>
 
 
 <div class="full">
-<label>Delivery Address</label>
+
+<label>
+Delivery Address
+</label>
 
 <textarea
 id="address"
 placeholder="Complete delivery address"
 ></textarea>
+
 </div>
 
 
 <div>
-<label>Preferred Date</label>
+
+<label>
+Preferred Date
+</label>
 
 <input
 id="date"
 type="date"
 >
+
 </div>
 
 
 <div>
-<label>Preferred Time</label>
+
+<label>
+Preferred Time
+</label>
 
 <input
 id="time"
 type="time"
 >
-</div>
 
 </div>
 
+</div>
 
-<div class="custom-options" style="margin-top:25px;">
 
-<h3>Payment</h3>
+<div class="custom-options">
+
+<h3>
+Payment
+</h3>
 
 <p style="font-size:13px;">
-Payment will be arranged <strong>after we confirm your flower availability and current price.</strong>
+
+Payment will be arranged after we confirm your flower availability and current price.
+
 </p>
+
 
 <div class="option-grid" style="margin-top:15px;">
 
 <label>
 <input type="checkbox" name="payment" value="GCash">
- GCash
+GCash
 </label>
 
 <label>
 <input type="checkbox" name="payment" value="Maya">
- Maya
+Maya
 </label>
 
 <label>
 <input type="checkbox" name="payment" value="MariBank">
- MariBank
+MariBank
 </label>
 
 <label>
 <input type="checkbox" name="payment" value="GoTyme">
- GoTyme
+GoTyme
 </label>
 
 <label>
 <input type="checkbox" name="payment" value="Bank Transfer">
- Bank Transfer
+Bank Transfer
 </label>
 
 </div>
@@ -972,7 +1089,9 @@ Payment will be arranged <strong>after we confirm your flower availability and c
 
 <div class="summary" id="summary">
 
-<h3>Order Inquiry Summary</h3>
+<h3>
+Order Inquiry Summary
+</h3>
 
 <div id="summaryContent"></div>
 
@@ -1002,8 +1121,13 @@ onclick="sendMessenger()"
 
 
 <p class="note">
-Your request is an inquiry only. No payment is required through this website.
+
+Your request is an inquiry only.
+
+No payment is required through this website.
+
 We'll confirm availability and price with you first.
+
 </p>
 
 </div>
@@ -1011,28 +1135,50 @@ We'll confirm availability and price with you first.
 </section>
 
 
-<section class="section" id="how">
+<section class="section">
 
 <div class="section-title">
-<span>Simple & Easy</span>
-<h2>How It Works</h2>
+
+<span>
+Simple & Easy
+</span>
+
+<h2>
+How It Works
+</h2>
+
 </div>
+
 
 <div class="info">
 
-<p>🌸 <strong>1.</strong> Choose your flowers</p>
+<p>
+🌸 <strong>1.</strong> Choose your flowers
+</p>
 
-<p>🎀 <strong>2.</strong> Customize your arrangement</p>
+<p>
+🎀 <strong>2.</strong> Customize your arrangement
+</p>
 
-<p>🛒 <strong>3.</strong> Add your selections to your inquiry cart</p>
+<p>
+🛒 <strong>3.</strong> Add your selections to your inquiry cart
+</p>
 
-<p>📦 <strong>4.</strong> Enter pickup or delivery details</p>
+<p>
+📦 <strong>4.</strong> Enter pickup or delivery details
+</p>
 
-<p>💌 <strong>5.</strong> Send your inquiry through Messenger</p>
+<p>
+💌 <strong>5.</strong> Send your inquiry through Messenger
+</p>
 
-<p>💰 <strong>6.</strong> We'll check availability and give you the current price</p>
+<p>
+💰 <strong>6.</strong> We'll check availability and give you the current price
+</p>
 
-<p>💳 <strong>7.</strong> Choose your payment method after confirmation</p>
+<p>
+💳 <strong>7.</strong> Choose your payment method after confirmation
+</p>
 
 </div>
 
@@ -1042,21 +1188,39 @@ We'll confirm availability and price with you first.
 <section class="section" id="contact">
 
 <div class="section-title">
-<span>Get In Touch</span>
-<h2>Contact Soleil</h2>
+
+<span>
+Get In Touch
+</span>
+
+<h2>
+Contact Soleil
+</h2>
+
 </div>
+
 
 <div class="contact-box">
 
-<p>📍 Dangwa, Manila, Philippines</p>
+<p>
+📍 Dangwa, Manila, Philippines
+</p>
 
-<p>🚚 Pickup & Delivery Only</p>
+<p>
+🚚 Pickup & Delivery Only
+</p>
 
-<p>❌ No Walk-ins</p>
+<p>
+❌ No Walk-ins
+</p>
 
-<p>📞 09999767402</p>
+<p>
+📞 09999767402
+</p>
+
 
 <br>
+
 
 <a
 class="btn"
@@ -1065,9 +1229,10 @@ href="tel:09999767402"
 📞 Call Us
 </a>
 
+
 <a
 class="btn"
-href="https://www.facebook.com/share/1LmTdvJTVe/?mibextid=wwXIfr"
+href="https://m.me/soleilflowerstore"
 target="_blank"
 >
 💬 Messenger
@@ -1080,516 +1245,553 @@ target="_blank"
 
 <footer>
 
-<p>Soleil Flower Store</p>
+<p>
+Soleil Flower Store
+</p>
 
-<p>Dangwa, Manila, Philippines</p>
+<p>
+Dangwa, Manila, Philippines
+</p>
 
-<p>09999767402</p>
+<p>
+09999767402
+</p>
 
-<p>© 2026 Soleil Flower Store</p>
+<p>
+© 2026 Soleil Flower Store
+</p>
 
 </footer>
 
 
 <script>
 
-let cart = [];
+let cart=[];
 
 
-/* =========================
-   CHOOSE FLOWER
-========================= */
+function chooseFlower(name){
 
-function chooseFlower(name) {
+document.getElementById("flower").value=name;
 
-    document.getElementById("flower").value = name;
-
-    document.getElementById("inquiry").scrollIntoView({
-        behavior: "smooth"
-    });
-}
-
-
-/* =========================
-   ADD TO CART
-========================= */
-
-function addToCart() {
-
-    const flower =
-        document.getElementById("flower").value;
-
-    const quantity =
-        document.getElementById("quantity").value;
-
-    const color =
-        document.getElementById("color").value;
-
-    const wrapper =
-        document.getElementById("wrapper").value;
-
-    const ribbon =
-        document.getElementById("ribbon").value;
-
-    const occasion =
-        document.getElementById("occasion").value;
-
-    const cardMessage =
-        document.getElementById("cardMessage").value;
-
-    const specialRequest =
-        document.getElementById("specialRequest").value;
-
-
-    if (!flower) {
-
-        alert("Please select a flower first.");
-
-        return;
-    }
-
-
-    const item = {
-
-        flower: flower,
-
-        quantity: quantity,
-
-        color: color,
-
-        wrapper: wrapper,
-
-        ribbon: ribbon,
-
-        occasion: occasion,
-
-        cardMessage: cardMessage,
-
-        specialRequest: specialRequest
-
-    };
-
-
-    cart.push(item);
-
-    renderCart();
-
-    alert(
-        flower +
-        " has been added to your inquiry cart."
-    );
-}
-
-
-/* =========================
-   DISPLAY CART
-========================= */
-
-function renderCart() {
-
-    const container =
-        document.getElementById("cartItems");
-
-
-    if (cart.length === 0) {
-
-        container.innerHTML =
-            '<p class="empty">Your inquiry cart is empty.</p>';
-
-        return;
-    }
-
-
-    container.innerHTML = "";
-
-
-    cart.forEach(function(item,index) {
-
-        const div =
-            document.createElement("div");
-
-        div.className = "cart-item";
-
-
-        div.innerHTML = `
-
-        <button onclick="removeItem(${index})">
-        Remove
-        </button>
-
-        <strong>
-        ${item.flower}
-        </strong>
-
-        <br>
-
-        Quantity:
-        ${item.quantity}
-
-        <br>
-
-        Color:
-        ${item.color}
-
-        <br>
-
-        Wrapper:
-        ${item.wrapper}
-
-        <br>
-
-        Ribbon:
-        ${item.ribbon}
-
-        <br>
-
-        Occasion:
-        ${item.occasion}
-
-        `;
-
-
-        container.appendChild(div);
-
-    });
+document.getElementById("inquiry").scrollIntoView({
+behavior:"smooth"
+});
 
 }
 
 
-/* =========================
-   REMOVE ITEM
-========================= */
+function addToCart(){
 
-function removeItem(index) {
+const flower=
+document.getElementById("flower").value;
 
-    cart.splice(index,1);
+const quantity=
+document.getElementById("quantity").value;
 
-    renderCart();
+const color=
+document.getElementById("color").value;
 
-}
+const wrapper=
+document.getElementById("wrapper").value;
+
+const ribbon=
+document.getElementById("ribbon").value;
+
+const occasion=
+document.getElementById("occasion").value;
+
+const cardMessage=
+document.getElementById("cardMessage").value;
+
+const specialRequest=
+document.getElementById("specialRequest").value;
 
 
-/* =========================
-   GET PAYMENT METHODS
-========================= */
+if(!flower){
 
-function getPayments() {
+alert("Please select a flower first.");
 
-    const selected =
-        document.querySelectorAll(
-            'input[name="payment"]:checked'
-        );
-
-    let payments = [];
-
-    selected.forEach(function(item) {
-
-        payments.push(item.value);
-
-    });
-
-    return payments.length
-        ? payments.join(", ")
-        : "To be discussed";
+return;
 
 }
 
 
-/* =========================
-   SUMMARY
-========================= */
+cart.push({
 
-function showSummary() {
+flower:flower,
+quantity:quantity,
+color:color,
+wrapper:wrapper,
+ribbon:ribbon,
+occasion:occasion,
+cardMessage:cardMessage,
+specialRequest:specialRequest
 
-    if (cart.length === 0) {
-
-        alert(
-            "Please add at least one flower to your inquiry cart."
-        );
-
-        return;
-    }
+});
 
 
-    const name =
-        document.getElementById("customerName").value;
+renderCart();
 
-    const phone =
-        document.getElementById("customerPhone").value;
-
-    const orderType =
-        document.getElementById("orderType").value;
-
-    const deliveryService =
-        document.getElementById("deliveryService").value;
-
-    const address =
-        document.getElementById("address").value;
-
-    const date =
-        document.getElementById("date").value;
-
-    const time =
-        document.getElementById("time").value;
-
-
-    let html = "";
-
-
-    html += "<p><strong>Customer:</strong> " +
-        (name || "Not provided") +
-        "</p>";
-
-    html += "<p><strong>Contact:</strong> " +
-        (phone || "Not provided") +
-        "</p>";
-
-
-    html += "<br>";
-
-
-    cart.forEach(function(item,index) {
-
-        html += `
-        <p>
-        <strong>${index + 1}. ${item.flower}</strong><br>
-        Quantity: ${item.quantity}<br>
-        Flower Color: ${item.color}<br>
-        Wrapper: ${item.wrapper}<br>
-        Ribbon: ${item.ribbon}<br>
-        Occasion: ${item.occasion}
-        </p>
-        <br>
-        `;
-
-    });
-
-
-    html += "<p><strong>Order Type:</strong> " +
-        orderType +
-        "</p>";
-
-    html += "<p><strong>Delivery Service:</strong> " +
-        deliveryService +
-        "</p>";
-
-    html += "<p><strong>Address:</strong> " +
-        (address || "Not applicable") +
-        "</p>";
-
-    html += "<p><strong>Date:</strong> " +
-        (date || "To be discussed") +
-        "</p>";
-
-    html += "<p><strong>Time:</strong> " +
-        (time || "To be discussed") +
-        "</p>";
-
-    html += "<p><strong>Payment:</strong> " +
-        getPayments() +
-        "</p>";
-
-    html += `
-    <br>
-    <p>
-    <strong>Price:</strong>
-    To be confirmed after checking flower availability.
-    </p>
-    `;
-
-
-    document.getElementById(
-        "summaryContent"
-    ).innerHTML = html;
-
-
-    document.getElementById(
-        "summary"
-    ).style.display = "block";
-
-
-    document.getElementById(
-        "summary"
-    ).scrollIntoView({
-        behavior: "smooth"
-    });
+alert(
+flower+
+" has been added to your inquiry cart."
+);
 
 }
 
 
-/* =========================
-   SEND MESSENGER
-========================= */
+function renderCart(){
 
-function sendMessenger() {
-
-    if (cart.length === 0) {
-
-        alert(
-            "Please add at least one flower to your inquiry cart."
-        );
-
-        return;
-    }
+const container=
+document.getElementById("cartItems");
 
 
-    const name =
-        document.getElementById("customerName").value;
+if(cart.length===0){
 
-    const phone =
-        document.getElementById("customerPhone").value;
+container.innerHTML=
+'<p class="empty">Your inquiry cart is empty.</p>';
 
-    const orderType =
-        document.getElementById("orderType").value;
-
-    const deliveryService =
-        document.getElementById("deliveryService").value;
-
-    const address =
-        document.getElementById("address").value;
-
-    const date =
-        document.getElementById("date").value;
-
-    const time =
-        document.getElementById("time").value;
-
-
-    let message =
-        "🌸 HELLO SOLEIL FLOWER STORE!%0A%0A";
-
-    message +=
-        "I would like to make an inquiry.%0A%0A";
-
-
-    message +=
-        "👤 Name: " +
-        encodeURIComponent(name || "Not provided") +
-        "%0A";
-
-    message +=
-        "📞 Contact: " +
-        encodeURIComponent(phone || "Not provided") +
-        "%0A%0A";
-
-
-    message +=
-        "💐 FLOWER REQUEST:%0A";
-
-
-    cart.forEach(function(item,index) {
-
-        message +=
-            "%0A" +
-            (index + 1) +
-            ". " +
-            encodeURIComponent(item.flower) +
-            "%0A";
-
-        message +=
-            "Quantity: " +
-            encodeURIComponent(item.quantity) +
-            "%0A";
-
-        message +=
-            "Color: " +
-            encodeURIComponent(item.color) +
-            "%0A";
-
-        message +=
-            "Wrapper: " +
-            encodeURIComponent(item.wrapper) +
-            "%0A";
-
-        message +=
-            "Ribbon: " +
-            encodeURIComponent(item.ribbon) +
-            "%0A";
-
-        message +=
-            "Occasion: " +
-            encodeURIComponent(item.occasion) +
-            "%0A";
-
-        if(item.cardMessage) {
-
-            message +=
-                "Card Message: " +
-                encodeURIComponent(item.cardMessage) +
-                "%0A";
-
-        }
-
-        if(item.specialRequest) {
-
-            message +=
-                "Special Request: " +
-                encodeURIComponent(item.specialRequest) +
-                "%0A";
-
-        }
-
-    });
-
-
-    message +=
-        "%0A📦 Order Type: " +
-        encodeURIComponent(orderType) +
-        "%0A";
-
-
-    message +=
-        "🚚 Delivery Service: " +
-        encodeURIComponent(deliveryService) +
-        "%0A";
-
-
-    message +=
-        "📍 Address: " +
-        encodeURIComponent(address || "Not applicable") +
-        "%0A";
-
-
-    message +=
-        "📅 Date: " +
-        encodeURIComponent(date || "To be discussed") +
-        "%0A";
-
-
-    message +=
-        "⏰ Time: " +
-        encodeURIComponent(time || "To be discussed") +
-        "%0A";
-
-
-    message +=
-        "💳 Payment: " +
-        encodeURIComponent(getPayments()) +
-        "%0A%0A";
-
-
-    message +=
-        "💰 Please send me the current price and availability.%0A%0A";
-
-    message +=
-        "Thank you! 🌷";
-
-
-    const messengerURL =
-        "https://www.facebook.com/share/1LmTdvJTVe/?mibextid=wwXIfr";
-
-
-    window.open(
-        messengerURL,
-        "_blank"
-    );
+return;
 
 }
 
 
-/* =========================
-   INITIALIZE
-========================= */
+container.innerHTML="";
+
+
+cart.forEach(function(item,index){
+
+const div=document.createElement("div");
+
+div.className="cart-item";
+
+
+div.innerHTML=`
+
+<button onclick="removeItem(${index})">
+Remove
+</button>
+
+<strong>
+${item.flower}
+</strong>
+
+<br>
+
+Quantity:
+${item.quantity}
+
+<br>
+
+Color:
+${item.color}
+
+<br>
+
+Wrapper:
+${item.wrapper}
+
+<br>
+
+Ribbon:
+${item.ribbon}
+
+<br>
+
+Occasion:
+${item.occasion}
+
+`;
+
+
+container.appendChild(div);
+
+});
+
+}
+
+
+function removeItem(index){
+
+cart.splice(index,1);
+
+renderCart();
+
+}
+
+
+function getPayments(){
+
+const selected=
+document.querySelectorAll(
+'input[name="payment"]:checked'
+);
+
+let payments=[];
+
+selected.forEach(function(item){
+
+payments.push(item.value);
+
+});
+
+return payments.length
+?payments.join(", ")
+:"To be discussed";
+
+}
+
+
+function showSummary(){
+
+if(cart.length===0){
+
+alert(
+"Please add at least one flower to your inquiry cart."
+);
+
+return;
+
+}
+
+
+const name=
+document.getElementById("customerName").value;
+
+const phone=
+document.getElementById("customerPhone").value;
+
+const orderType=
+document.getElementById("orderType").value;
+
+const deliveryService=
+document.getElementById("deliveryService").value;
+
+const address=
+document.getElementById("address").value;
+
+const date=
+document.getElementById("date").value;
+
+const time=
+document.getElementById("time").value;
+
+
+let html="";
+
+
+html+=
+"<p><strong>Customer:</strong> "+
+(name||"Not provided")+
+"</p>";
+
+html+=
+"<p><strong>Contact:</strong> "+
+(phone||"Not provided")+
+"</p><br>";
+
+
+cart.forEach(function(item,index){
+
+html+=`
+
+<p>
+
+<strong>
+${index+1}. ${item.flower}
+</strong>
+
+<br>
+
+Quantity:
+${item.quantity}
+
+<br>
+
+Flower Color:
+${item.color}
+
+<br>
+
+Wrapper:
+${item.wrapper}
+
+<br>
+
+Ribbon:
+${item.ribbon}
+
+<br>
+
+Occasion:
+${item.occasion}
+
+</p>
+
+<br>
+
+`;
+
+});
+
+
+html+=
+"<p><strong>Order Type:</strong> "+
+orderType+
+"</p>";
+
+html+=
+"<p><strong>Delivery Service:</strong> "+
+deliveryService+
+"</p>";
+
+html+=
+"<p><strong>Address:</strong> "+
+(address||"Not applicable")+
+"</p>";
+
+html+=
+"<p><strong>Date:</strong> "+
+(date||"To be discussed")+
+"</p>";
+
+html+=
+"<p><strong>Time:</strong> "+
+(time||"To be discussed")+
+"</p>";
+
+html+=
+"<p><strong>Payment:</strong> "+
+getPayments()+
+"</p>";
+
+html+=`
+
+<br>
+
+<p>
+
+<strong>
+Price:
+</strong>
+
+To be confirmed after checking flower availability.
+
+</p>
+
+`;
+
+
+document.getElementById(
+"summaryContent"
+).innerHTML=html;
+
+
+document.getElementById(
+"summary"
+).style.display="block";
+
+
+document.getElementById(
+"summary"
+).scrollIntoView({
+behavior:"smooth"
+});
+
+}
+
+
+function sendMessenger(){
+
+if(cart.length===0){
+
+alert(
+"Please add at least one flower to your inquiry cart."
+);
+
+return;
+
+}
+
+
+const name=
+document.getElementById("customerName").value;
+
+const phone=
+document.getElementById("customerPhone").value;
+
+const orderType=
+document.getElementById("orderType").value;
+
+const deliveryService=
+document.getElementById("deliveryService").value;
+
+const address=
+document.getElementById("address").value;
+
+const date=
+document.getElementById("date").value;
+
+const time=
+document.getElementById("time").value;
+
+
+let message=
+"🌸 HELLO SOLEIL FLOWER STORE!\n\n";
+
+message+=
+"I would like to make an inquiry.\n\n";
+
+
+message+=
+"👤 Name: "+
+(name||"Not provided")+
+"\n";
+
+message+=
+"📞 Contact: "+
+(phone||"Not provided")+
+"\n\n";
+
+
+message+=
+"💐 FLOWER REQUEST:\n";
+
+
+cart.forEach(function(item,index){
+
+message+=
+"\n"+
+(index+1)+
+". "+
+item.flower+
+"\n";
+
+message+=
+"Quantity: "+
+item.quantity+
+"\n";
+
+message+=
+"Color: "+
+item.color+
+"\n";
+
+message+=
+"Wrapper: "+
+item.wrapper+
+"\n";
+
+message+=
+"Ribbon: "+
+item.ribbon+
+"\n";
+
+message+=
+"Occasion: "+
+item.occasion+
+"\n";
+
+
+if(item.cardMessage){
+
+message+=
+"Card Message: "+
+item.cardMessage+
+"\n";
+
+}
+
+
+if(item.specialRequest){
+
+message+=
+"Special Request: "+
+item.specialRequest+
+"\n";
+
+}
+
+});
+
+
+message+=
+"\n📦 Order Type: "+
+orderType+
+"\n";
+
+message+=
+"🚚 Delivery Service: "+
+deliveryService+
+"\n";
+
+message+=
+"📍 Address: "+
+(address||"Not applicable")+
+"\n";
+
+message+=
+"📅 Date: "+
+(date||"To be discussed")+
+"\n";
+
+message+=
+"⏰ Time: "+
+(time||"To be discussed")+
+"\n";
+
+message+=
+"💳 Payment: "+
+getPayments()+
+"\n\n";
+
+message+=
+"💰 Please send me the current price and availability.\n\n";
+
+message+=
+"Thank you! 🌷";
+
+
+/*
+
+Messenger doesn't reliably accept
+website-generated text automatically.
+
+So we copy the inquiry first,
+then open Soleil's Messenger.
+
+*/
+
+navigator.clipboard.writeText(message)
+.then(function(){
+
+alert(
+"Your inquiry has been copied! 🌸\n\n"+
+"Messenger will now open. "+
+"Please paste your inquiry into the chat."
+);
+
+window.open(
+"https://m.me/soleilflowerstore",
+"_blank"
+);
+
+})
+.catch(function(){
+
+alert(
+"Please copy your inquiry before opening Messenger."
+);
+
+window.open(
+"https://m.me/soleilflowerstore",
+"_blank"
+);
+
+});
+
+}
+
 
 renderCart();
 
