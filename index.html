@@ -4,18 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Soleil Flower Store</title>
+<title>Soleil Flower Store | Dangwa Manila</title>
 
 <style>
-
-/* =========================
-   GENERAL
-========================= */
-
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 html {
@@ -23,40 +18,34 @@ html {
 }
 
 body {
-    font-family: "Montserrat", Arial, sans-serif;
+    font-family: Arial, sans-serif;
     background: #fff9fb;
     color: #5c4149;
     line-height: 1.6;
 }
 
-
-/* =========================
-   HEADER
-========================= */
-
 header {
-    background: rgba(255, 239, 245, 0.97);
+    background: #fff0f5;
     padding: 20px 15px;
     text-align: center;
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 2px 15px rgba(120, 70, 85, 0.08);
+    box-shadow: 0 2px 15px rgba(120,70,85,.08);
 }
 
 .logo {
-    font-family: Georgia, "Times New Roman", serif;
+    font-family: Georgia, serif;
     font-size: 30px;
-    color: #9b526b;
+    color: #91465e;
     letter-spacing: 1px;
 }
 
 .tagline {
     font-family: Georgia, serif;
     font-style: italic;
+    color: #ad6a7f;
     font-size: 13px;
-    color: #a86a7d;
-    margin-top: 2px;
 }
 
 nav {
@@ -64,9 +53,9 @@ nav {
 }
 
 nav a {
-    text-decoration: none;
     color: #684750;
-    margin: 0 7px;
+    text-decoration: none;
+    margin: 0 6px;
     font-size: 13px;
 }
 
@@ -74,39 +63,34 @@ nav a:hover {
     color: #c25d7c;
 }
 
-
-/* =========================
-   HERO
-========================= */
-
 .hero {
-    min-height: 520px;
+    min-height: 500px;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     padding: 70px 20px;
     background:
-        radial-gradient(circle at top left, #ffe4ed, transparent 35%),
-        radial-gradient(circle at bottom right, #f8dce8, transparent 35%),
-        #fff8fb;
+        radial-gradient(circle at top left,#ffe2ec,transparent 35%),
+        radial-gradient(circle at bottom right,#f8dce8,transparent 35%),
+        #fff9fb;
 }
 
 .hero-content {
-    max-width: 750px;
+    max-width: 760px;
 }
 
 .hero-small {
-    font-size: 14px;
-    letter-spacing: 3px;
     text-transform: uppercase;
-    color: #b25d76;
+    letter-spacing: 3px;
+    font-size: 13px;
+    color: #b35d76;
     margin-bottom: 15px;
 }
 
 .hero h1 {
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 52px;
+    font-family: Georgia, serif;
+    font-size: 50px;
     font-weight: normal;
     color: #8e465e;
     line-height: 1.15;
@@ -114,33 +98,23 @@ nav a:hover {
 }
 
 .hero p {
-    font-size: 17px;
+    font-size: 16px;
     max-width: 650px;
     margin: auto;
-    color: #6e5058;
 }
-
-.hero-buttons {
-    margin-top: 28px;
-}
-
-
-/* =========================
-   BUTTONS
-========================= */
 
 .btn {
     display: inline-block;
-    text-decoration: none;
-    border: none;
     background: #b95d79;
     color: white;
-    padding: 13px 25px;
+    border: none;
     border-radius: 30px;
+    padding: 12px 23px;
     margin: 6px;
-    font-size: 14px;
+    text-decoration: none;
     cursor: pointer;
-    transition: 0.3s;
+    font-size: 14px;
+    transition: .25s;
 }
 
 .btn:hover {
@@ -148,185 +122,129 @@ nav a:hover {
     transform: translateY(-2px);
 }
 
+.btn-light {
+    background: #f5d1dc;
+    color: #7c4053;
+}
 
-/* =========================
-   SECTIONS
-========================= */
+.btn-light:hover {
+    background: #e9b9c9;
+}
 
 .section {
     max-width: 1150px;
     margin: auto;
-    padding: 75px 20px;
+    padding: 70px 20px;
 }
 
 .section-title {
     text-align: center;
-    margin-bottom: 45px;
+    margin-bottom: 40px;
 }
 
 .section-title span {
-    font-size: 13px;
-    letter-spacing: 3px;
     text-transform: uppercase;
-    color: #b25d76;
+    letter-spacing: 3px;
+    font-size: 12px;
+    color: #b35d76;
 }
 
 .section-title h2 {
-    font-family: Georgia, "Times New Roman", serif;
+    font-family: Georgia, serif;
     font-size: 38px;
     font-weight: normal;
     color: #8e465e;
-    margin-top: 5px;
 }
-
-
-/* =========================
-   FLOWER CARDS
-========================= */
 
 .products {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 22px;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
 }
 
 .product {
-    min-height: 220px;
-    padding: 35px 20px;
-    border-radius: 25px;
+    background: linear-gradient(145deg,#fff0f5,#fce2eb);
+    border: 1px solid #f1ccd8;
+    border-radius: 24px;
+    padding: 30px 18px;
     text-align: center;
-
+    min-height: 245px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-    background:
-        linear-gradient(
-            145deg,
-            #fff1f5,
-            #fce2eb
-        );
-
-    border: 1px solid #f2cbd7;
-
-    box-shadow:
-        0 8px 25px rgba(137, 73, 92, 0.08);
-
-    transition: 0.3s;
+    box-shadow: 0 8px 25px rgba(137,73,92,.07);
+    transition: .25s;
 }
 
-.product:nth-child(3n + 2) {
-    background:
-        linear-gradient(
-            145deg,
-            #fff7ed,
-            #fcebdc
-        );
+.product:nth-child(3n+2) {
+    background: linear-gradient(145deg,#fff7ed,#fcebdc);
 }
 
 .product:nth-child(3n) {
-    background:
-        linear-gradient(
-            145deg,
-            #fff4f7,
-            #f6e5ee
-        );
+    background: linear-gradient(145deg,#fff4f7,#f6e5ee);
 }
 
 .product:hover {
-    transform: translateY(-6px);
-    box-shadow:
-        0 14px 30px rgba(137, 73, 92, 0.14);
+    transform: translateY(-5px);
+    box-shadow: 0 14px 30px rgba(137,73,92,.12);
 }
 
 .flower-symbol {
-    font-size: 32px;
-    margin-bottom: 12px;
-}
-
-.product h3 {
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 27px;
-    font-weight: normal;
-    color: #8e465e;
-    margin-bottom: 10px;
-}
-
-.product p {
-    font-size: 14px;
-    color: #765861;
-    max-width: 270px;
-    margin-bottom: 12px;
-}
-
-
-/* =========================
-   INFORMATION BOX
-========================= */
-
-.info {
-    background: #fce6ee;
-    border-radius: 25px;
-    padding: 40px 25px;
-    text-align: center;
-    box-shadow: 0 8px 25px rgba(137, 73, 92, 0.07);
-}
-
-.info p {
-    margin: 12px;
-    font-size: 16px;
-}
-
-
-/* =========================
-   INQUIRY
-========================= */
-
-.order-box {
-    max-width: 700px;
-    margin: auto;
-    background: white;
-    padding: 35px;
-    border-radius: 25px;
-    box-shadow: 0 8px 30px rgba(137, 73, 92, 0.09);
-}
-
-.order-box h3 {
-    text-align: center;
-    font-family: Georgia, serif;
-    font-size: 28px;
-    font-weight: normal;
-    color: #8e465e;
+    font-size: 34px;
     margin-bottom: 8px;
 }
 
-.small-note {
-    text-align: center;
+.product h3 {
+    font-family: Georgia, serif;
+    font-size: 25px;
+    font-weight: normal;
+    color: #8e465e;
+}
+
+.product p {
     font-size: 13px;
-    color: #8a7178;
-    margin-bottom: 20px;
+    max-width: 270px;
+    margin: 8px auto;
+    color: #765861;
+}
+
+.inquiry-box {
+    background: white;
+    max-width: 850px;
+    margin: auto;
+    padding: 32px;
+    border-radius: 25px;
+    box-shadow: 0 8px 30px rgba(137,73,92,.09);
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.full {
+    grid-column: 1 / -1;
 }
 
 label {
     display: block;
-    margin-top: 17px;
-    margin-bottom: 6px;
-    font-size: 14px;
+    font-size: 13px;
     font-weight: bold;
-    color: #674751;
+    margin-bottom: 6px;
+    color: #684750;
 }
 
 input,
 select,
 textarea {
     width: 100%;
-    padding: 13px;
-    border-radius: 12px;
-    border: 1px solid #e7c5d0;
+    padding: 12px;
+    border: 1px solid #e5c2ce;
+    border-radius: 11px;
     background: #fffafb;
     color: #5c4149;
-    font-family: Arial, sans-serif;
     font-size: 14px;
     outline: none;
 }
@@ -334,85 +252,140 @@ textarea {
 input:focus,
 select:focus,
 textarea:focus {
-    border-color: #c46a86;
+    border-color: #c66b87;
 }
 
 textarea {
-    min-height: 110px;
+    min-height: 100px;
     resize: vertical;
 }
 
+.custom-options {
+    background: #fff4f7;
+    border-radius: 18px;
+    padding: 20px;
+    margin-top: 20px;
+}
 
-/* =========================
-   CONTACT
-========================= */
+.custom-options h3 {
+    font-family: Georgia, serif;
+    font-weight: normal;
+    color: #8e465e;
+    margin-bottom: 15px;
+}
+
+.option-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.cart-box {
+    background: #fff0f5;
+    border-radius: 20px;
+    padding: 20px;
+    margin-top: 25px;
+}
+
+.cart-box h3 {
+    font-family: Georgia, serif;
+    font-weight: normal;
+    color: #8e465e;
+}
+
+.cart-item {
+    background: white;
+    border-radius: 12px;
+    padding: 12px;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.cart-item button {
+    float: right;
+    border: none;
+    background: none;
+    color: #a54e68;
+    cursor: pointer;
+}
+
+.empty {
+    color: #876b74;
+    font-size: 13px;
+}
+
+.summary {
+    background: #fffafc;
+    border: 1px dashed #d9a9b8;
+    border-radius: 15px;
+    padding: 18px;
+    margin-top: 20px;
+    display: none;
+}
+
+.summary h3 {
+    font-family: Georgia, serif;
+    color: #8e465e;
+    font-weight: normal;
+}
+
+.info {
+    background: #fce6ee;
+    border-radius: 25px;
+    padding: 35px;
+    text-align: center;
+}
+
+.info p {
+    margin: 10px;
+}
 
 .contact-box {
     text-align: center;
-    background:
-        linear-gradient(
-            145deg,
-            #fce3ec,
-            #fff1f5
-        );
+    background: linear-gradient(145deg,#fce3ec,#fff1f5);
     border-radius: 25px;
     padding: 40px 20px;
 }
-
-.contact-box p {
-    margin: 8px;
-}
-
-
-/* =========================
-   FOOTER
-========================= */
 
 footer {
     background: #8e465e;
     color: white;
     text-align: center;
-    padding: 35px 20px;
+    padding: 30px 20px;
 }
 
 footer p {
     margin: 5px;
-    font-size: 14px;
+    font-size: 13px;
 }
 
+.note {
+    text-align: center;
+    color: #866a73;
+    font-size: 13px;
+    margin-top: 10px;
+}
 
-/* =========================
-   MOBILE
-========================= */
-
-@media (max-width: 750px) {
-
+@media(max-width:750px) {
     .hero h1 {
-        font-size: 40px;
+        font-size: 39px;
     }
 
     .products {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 15px;
+        grid-template-columns: repeat(2,1fr);
     }
 
-    .product {
-        min-height: 200px;
-        padding: 25px 12px;
+    .form-grid,
+    .option-grid {
+        grid-template-columns: 1fr;
     }
 
-    .product h3 {
-        font-size: 21px;
+    .full {
+        grid-column: auto;
     }
-
-    .product p {
-        font-size: 12px;
-    }
-
 }
 
-@media (max-width: 480px) {
-
+@media(max-width:480px) {
     .logo {
         font-size: 25px;
     }
@@ -422,97 +395,62 @@ footer p {
         margin: 0 3px;
     }
 
-    .hero {
-        min-height: 470px;
-    }
-
     .hero h1 {
-        font-size: 35px;
-    }
-
-    .hero p {
-        font-size: 15px;
-    }
-
-    .section {
-        padding: 55px 15px;
-    }
-
-    .section-title h2 {
-        font-size: 31px;
+        font-size: 34px;
     }
 
     .products {
         grid-template-columns: 1fr 1fr;
+        gap: 12px;
     }
 
     .product {
-        min-height: 190px;
+        min-height: 205px;
+        padding: 20px 10px;
     }
 
     .product h3 {
         font-size: 19px;
     }
 
+    .product p {
+        font-size: 11px;
+    }
+
     .flower-symbol {
-        font-size: 26px;
+        font-size: 27px;
     }
 
     .product .btn {
         font-size: 11px;
-        padding: 9px 12px;
+        padding: 9px 13px;
     }
 
-    .order-box {
-        padding: 22px 17px;
+    .inquiry-box {
+        padding: 20px 15px;
     }
-
 }
-
 </style>
 </head>
 
-
 <body>
-
-
-<!-- =========================
-     HEADER
-========================= -->
 
 <header>
 
-<div class="logo">
-Soleil Flower Store
-</div>
+<div class="logo">Soleil Flower Store</div>
 
-<div class="tagline">
-flowers made with love
-</div>
+<div class="tagline">flowers made with love</div>
 
 <nav>
-
 <a href="#home">Home</a>
-
 <a href="#flowers">Flowers</a>
-
 <a href="#services">Services</a>
-
-<a href="#how">How to Order</a>
-
-<a href="#inquiry">Inquire</a>
-
+<a href="#inquiry">Order</a>
 <a href="#contact">Contact</a>
-
 </nav>
 
 </header>
 
-
-
-<!-- =========================
-     HERO
-========================= -->
 
 <section class="hero" id="home">
 
@@ -527,443 +465,188 @@ Flowers for Every Beautiful Moment
 </h1>
 
 <p>
-Beautiful flowers and thoughtful arrangements
-made especially for your special moments.
+Fresh flowers, custom bouquets and thoughtful
+arrangements made especially for your special moments.
 </p>
 
 <p style="margin-top:12px;">
-Pickup & Delivery Only • No Walk-ins
+🚚 Pickup & Delivery Only • ❌ No Walk-ins
 </p>
 
-
-<div class="hero-buttons">
+<div style="margin-top:25px;">
 
 <a class="btn" href="#flowers">
-Explore Our Flowers
+Explore Flowers
 </a>
 
 <a class="btn" href="#inquiry">
-Make an Inquiry 💌
+Start an Inquiry 💌
 </a>
 
 </div>
 
-
 <a
-class="btn"
+class="btn btn-light"
 href="https://www.facebook.com/share/1LmTdvJTVe/?mibextid=wwXIfr"
 target="_blank"
 >
-💬 Message Us
+💬 Messenger
 </a>
 
 </div>
 
 </section>
 
-
-
-<!-- =========================
-     FLOWERS
-========================= -->
 
 <section class="section" id="flowers">
 
 <div class="section-title">
-
 <span>Our Collection</span>
-
-<h2>
-Flowers & Arrangements
-</h2>
-
+<h2>Flowers & Arrangements</h2>
 </div>
-
 
 <div class="products">
 
 
-<!-- TULIPS -->
-
 <div class="product">
-
 <div class="flower-symbol">🌷</div>
-
-<h3>
-Tulips
-</h3>
-
-<p>
-Elegant and delicate flowers
-for beautiful moments.
-</p>
-
-<a class="btn" href="#inquiry">
-Inquire
-</a>
-
+<h3>Tulips</h3>
+<p>Elegant and delicate blooms for beautiful moments.</p>
+<button class="btn" onclick="chooseFlower('Tulips')">Choose</button>
 </div>
 
 
-
-<!-- CARNATION -->
-
 <div class="product">
-
 <div class="flower-symbol">🌸</div>
-
-<h3>
-Carnation
-</h3>
-
-<p>
-Lovely blooms perfect
-for thoughtful gifts.
-</p>
-
-<a class="btn" href="#inquiry">
-Inquire
-</a>
-
+<h3>Carnation</h3>
+<p>Lovely blooms perfect for thoughtful gifts.</p>
+<button class="btn" onclick="chooseFlower('Carnation')">Choose</button>
 </div>
 
 
-
-<!-- STARGAZER -->
-
 <div class="product">
-
 <div class="flower-symbol">🌺</div>
-
-<h3>
-Stargazer
-</h3>
-
-<p>
-Elegant lilies with
-a romantic appearance.
-</p>
-
-<a class="btn" href="#inquiry">
-Inquire
-</a>
-
+<h3>Stargazer</h3>
+<p>Elegant lilies with a romantic appearance.</p>
+<button class="btn" onclick="chooseFlower('Stargazer')">Choose</button>
 </div>
 
 
-
-<!-- LOCAL ROSES -->
-
 <div class="product">
-
 <div class="flower-symbol">🌹</div>
-
-<h3>
-Local Roses
-</h3>
-
-<p>
-Fresh roses perfect
-for romantic occasions.
-</p>
-
-<a class="btn" href="#inquiry">
-Inquire
-</a>
-
+<h3>Local Roses</h3>
+<p>Fresh local roses for romantic occasions.</p>
+<button class="btn" onclick="chooseFlower('Local Roses')">Choose</button>
 </div>
 
 
-
-<!-- IMPORTED ROSES -->
-
 <div class="product">
-
 <div class="flower-symbol">🌹</div>
-
-<h3>
-Imported Roses
-</h3>
-
-<p>
-Premium roses for
-elegant arrangements.
-</p>
-
-<a class="btn" href="#inquiry">
-Inquire
-</a>
-
+<h3>Imported Roses</h3>
+<p>Premium roses for elegant arrangements.</p>
+<button class="btn" onclick="chooseFlower('Imported Roses')">Choose</button>
 </div>
 
 
-
-<!-- PEONIES -->
-
 <div class="product">
-
 <div class="flower-symbol">🌸</div>
-
-<h3>
-Peonies
-</h3>
-
-<p>
-Soft and romantic blooms
-for special occasions.
-</p>
-
-<a class="btn" href="#inquiry">
-Inquire
-</a>
-
+<h3>Peonies</h3>
+<p>Soft and romantic blooms for special occasions.</p>
+<button class="btn" onclick="chooseFlower('Peonies')">Choose</button>
 </div>
 
 
-
-<!-- GERBERA -->
-
 <div class="product">
-
 <div class="flower-symbol">🌼</div>
-
-<h3>
-Gerbera
-</h3>
-
-<p>
-Bright and cheerful flowers
-for joyful celebrations.
-</p>
-
-<a class="btn" href="#inquiry">
-Inquire
-</a>
-
+<h3>Gerbera</h3>
+<p>Bright and cheerful flowers for joyful celebrations.</p>
+<button class="btn" onclick="chooseFlower('Gerbera')">Choose</button>
 </div>
 
 
-
-<!-- LISIANTHUS -->
-
 <div class="product">
-
 <div class="flower-symbol">🌷</div>
-
-<h3>
-Lisianthus
-</h3>
-
-<p>
-Delicate blooms for
-elegant arrangements.
-</p>
-
-<a class="btn" href="#inquiry">
-Inquire
-</a>
-
+<h3>Lisianthus</h3>
+<p>Delicate blooms for elegant arrangements.</p>
+<button class="btn" onclick="chooseFlower('Lisianthus')">Choose</button>
 </div>
 
 
-
-<!-- SUNFLOWER -->
-
 <div class="product">
-
 <div class="flower-symbol">🌻</div>
-
-<h3>
-Sunflower
-</h3>
-
-<p>
-Bright and cheerful flowers
-full of warmth and happiness.
-</p>
-
-<a class="btn" href="#inquiry">
-Inquire
-</a>
-
+<h3>Sunflower</h3>
+<p>Bright and cheerful flowers full of warmth.</p>
+<button class="btn" onclick="chooseFlower('Sunflower')">Choose</button>
 </div>
 
 
-
-<!-- DRIED FLOWERS -->
-
 <div class="product">
-
 <div class="flower-symbol">🤍</div>
-
-<h3>
-Dried Flowers
-</h3>
-
-<p>
-Timeless arrangements with
-a natural aesthetic.
-</p>
-
-<a class="btn" href="#inquiry">
-Inquire
-</a>
-
+<h3>Dried Flowers</h3>
+<p>Timeless arrangements with a natural aesthetic.</p>
+<button class="btn" onclick="chooseFlower('Dried Flowers')">Choose</button>
 </div>
 
 
-
-<!-- FILLERS -->
-
 <div class="product">
-
 <div class="flower-symbol">🌿</div>
-
-<h3>
-Fillers
-</h3>
-
-<p>
-Beautiful fillers and greenery
-to complete your bouquet.
-</p>
-
-<a class="btn" href="#inquiry">
-Inquire
-</a>
-
+<h3>Fillers</h3>
+<p>Beautiful fillers and greenery for your bouquet.</p>
+<button class="btn" onclick="chooseFlower('Fillers')">Choose</button>
 </div>
 
 
-
-<!-- CUSTOM BOUQUETS -->
-
 <div class="product">
-
 <div class="flower-symbol">💐</div>
-
-<h3>
-Custom Bouquets
-</h3>
-
-<p>
-Create a bouquet based
-on your preferred style.
-</p>
-
-<a class="btn" href="#inquiry">
-Customize
-</a>
-
+<h3>Custom Bouquets</h3>
+<p>Create a bouquet based on your preferred style.</p>
+<button class="btn" onclick="chooseFlower('Custom Bouquets')">Customize</button>
 </div>
 
 
-
-<!-- WEDDING -->
-
 <div class="product">
-
 <div class="flower-symbol">👰</div>
-
-<h3>
-Wedding Bouquet
-</h3>
-
-<p>
-Elegant flowers for
-your special wedding day.
-</p>
-
-<a class="btn" href="#inquiry">
-Inquire
-</a>
-
+<h3>Wedding Bouquet</h3>
+<p>Elegant flowers for your special wedding day.</p>
+<button class="btn" onclick="chooseFlower('Wedding Bouquet')">Choose</button>
 </div>
 
 
-
-<!-- SYMPATHY -->
-
 <div class="product">
-
 <div class="flower-symbol">🤍</div>
-
-<h3>
-Sympathy Flowers
-</h3>
-
-<p>
-Thoughtful flowers expressing
-love, sympathy and care.
-</p>
-
-<a class="btn" href="#inquiry">
-Inquire
-</a>
-
+<h3>Sympathy Flowers</h3>
+<p>Thoughtful flowers expressing love and care.</p>
+<button class="btn" onclick="chooseFlower('Sympathy Flowers')">Choose</button>
 </div>
 
-
-
-<!-- FUNERAL -->
 
 <div class="product">
-
 <div class="flower-symbol">🕊️</div>
-
-<h3>
-Funeral Flowers
-</h3>
-
-<p>
-Respectful arrangements
-for memorial services.
-</p>
-
-<a class="btn" href="#inquiry">
-Inquire
-</a>
-
+<h3>Funeral Flowers</h3>
+<p>Respectful arrangements for memorial services.</p>
+<button class="btn" onclick="chooseFlower('Funeral Flowers')">Choose</button>
 </div>
-
 
 </div>
 
 </section>
 
 
-
-<!-- =========================
-     SERVICES
-========================= -->
-
 <section class="section" id="services">
 
 <div class="section-title">
-
 <span>What We Offer</span>
-
-<h2>
-Our Services
-</h2>
-
+<h2>Our Services</h2>
 </div>
-
 
 <div class="info">
 
 <p>💐 Custom Flower Arrangements</p>
-
 <p>👰 Wedding Bouquets</p>
-
 <p>🤍 Sympathy Flowers</p>
-
 <p>🕊️ Funeral Flowers</p>
-
 <p>🎁 Gift Bouquets</p>
-
 <p>🚚 Delivery</p>
-
 <p>📦 Pickup</p>
 
 </div>
@@ -971,431 +654,409 @@ Our Services
 </section>
 
 
-
-<!-- =========================
-     HOW TO ORDER
-========================= -->
-
-<section class="section" id="how">
-
-<div class="section-title">
-
-<span>Simple & Easy</span>
-
-<h2>
-How to Order
-</h2>
-
-</div>
-
-
-<div class="info">
-
-<p>
-🌸 <strong>1.</strong> Browse our flower collection
-</p>
-
-<p>
-💌 <strong>2.</strong> Send us an inquiry
-</p>
-
-<p>
-🌷 <strong>3.</strong> Tell us your preferred flowers
-</p>
-
-<p>
-💬 <strong>4.</strong> We'll check availability
-</p>
-
-<p>
-🚚 <strong>5.</strong> Choose pickup or delivery
-</p>
-
-<p>
-💳 <strong>6.</strong> Payment details will be discussed after confirmation
-</p>
-
-<br>
-
-<p>
-📍 Dangwa, Manila, Philippines
-</p>
-
-<p>
-🚚 Pickup & Delivery Only
-</p>
-
-<p>
-❌ No Walk-ins
-</p>
-
-</div>
-
-</section>
-
-
-
-<!-- =========================
-     INQUIRY
-========================= -->
-
 <section class="section" id="inquiry">
 
 <div class="section-title">
+<span>Online Inquiry</span>
+<h2>Create Your Flower Request</h2>
+</div>
 
-<span>Let's Talk</span>
+<div class="inquiry-box">
 
-<h2>
-Make an Inquiry
-</h2>
+<p class="note">
+🌸 Flower prices and availability change regularly.
+No fixed prices are displayed. We'll confirm the current price with you.
+</p>
+
+
+<div class="form-grid" style="margin-top:25px;">
+
+
+<div>
+<label>Flower / Arrangement</label>
+
+<select id="flower">
+<option value="">Select a flower</option>
+<option>Tulips</option>
+<option>Carnation</option>
+<option>Stargazer</option>
+<option>Local Roses</option>
+<option>Imported Roses</option>
+<option>Peonies</option>
+<option>Gerbera</option>
+<option>Lisianthus</option>
+<option>Sunflower</option>
+<option>Dried Flowers</option>
+<option>Fillers</option>
+<option>Custom Bouquets</option>
+<option>Wedding Bouquet</option>
+<option>Sympathy Flowers</option>
+<option>Funeral Flowers</option>
+</select>
 
 </div>
 
 
-<div class="order-box">
-
-<h3>
-Let's Create Something Beautiful
-</h3>
-
-<p class="small-note">
-
-Flower prices and availability may change.
-Send us an inquiry for the latest details.
-
-</p>
-
-
-<form
-action="https://formsubmit.co/princessconcepcion83@gmail.com"
-method="POST"
->
-
+<div>
+<label>Quantity / Stems</label>
 
 <input
-type="hidden"
-name="_subject"
-value="New Soleil Flower Store Inquiry"
->
-
-
-<input
-type="hidden"
-name="_template"
-value="table"
->
-
-
-<label>
-Full Name
-</label>
-
-<input
-type="text"
-name="Customer Name"
-placeholder="Your full name"
-required
->
-
-
-
-<label>
-Contact Number
-</label>
-
-<input
-type="tel"
-name="Customer Contact"
-placeholder="09XXXXXXXXX"
-required
->
-
-
-
-<label>
-What are you interested in?
-</label>
-
-<select
-name="Flower or Service"
-required
->
-
-<option value="">
-Select one
-</option>
-
-<option>Tulips</option>
-
-<option>Carnation</option>
-
-<option>Stargazer</option>
-
-<option>Local Roses</option>
-
-<option>Imported Roses</option>
-
-<option>Peonies</option>
-
-<option>Gerbera</option>
-
-<option>Lisianthus</option>
-
-<option>Sunflower</option>
-
-<option>Dried Flowers</option>
-
-<option>Fillers</option>
-
-<option>Custom Bouquets</option>
-
-<option>Wedding Bouquet</option>
-
-<option>Sympathy Flowers</option>
-
-<option>Funeral Flowers</option>
-
-</select>
-
-
-
-<label>
-Quantity
-</label>
-
-<input
+id="quantity"
 type="number"
-name="Quantity"
 min="1"
+value="1"
 placeholder="Example: 12"
-required
 >
 
+</div>
+
+</div>
 
 
-<label>
-Preferred Flowers
-</label>
+<div class="custom-options">
 
-<input
-type="text"
-name="Preferred Flowers"
-placeholder="Example: pink roses and tulips"
->
+<h3>Customize Your Flowers</h3>
 
+<div class="option-grid">
 
+<div>
+<label>Flower Color</label>
 
-<label>
-Preferred Color
-</label>
-
-<input
-type="text"
-name="Preferred Color"
-placeholder="Example: pink and white"
->
-
-
-
-<label>
-Budget
-</label>
-
-<input
-type="text"
-name="Budget"
-placeholder="Optional — you may provide your preferred budget"
->
-
-
-
-<label>
-Order Type
-</label>
-
-<select
-name="Order Type"
-required
->
-
-<option value="">
-Select one
-</option>
-
-<option>
-Pickup
-</option>
-
-<option>
-Delivery
-</option>
-
+<select id="color">
+<option>Any / Let florist choose</option>
+<option>Red</option>
+<option>Pink</option>
+<option>White</option>
+<option>Yellow</option>
+<option>Orange</option>
+<option>Purple</option>
+<option>Blue</option>
+<option>Mixed Colors</option>
 </select>
+</div>
 
 
+<div>
+<label>Wrapper Color</label>
 
-<label>
-Delivery Service
-</label>
-
-<select
-name="Delivery Service"
->
-
-<option value="">
-Select if delivery
-</option>
-
-<option>
-Lalamove
-</option>
-
-<option>
-GrabExpress
-</option>
-
+<select id="wrapper">
+<option>Any / Let florist choose</option>
+<option>White</option>
+<option>Pink</option>
+<option>Red</option>
+<option>Black</option>
+<option>Brown / Kraft</option>
+<option>Beige</option>
+<option>Pastel</option>
+<option>Mixed</option>
 </select>
+</div>
 
 
+<div>
+<label>Ribbon Color</label>
 
-<label>
-Delivery Address
-</label>
+<select id="ribbon">
+<option>Any / Let florist choose</option>
+<option>White</option>
+<option>Pink</option>
+<option>Red</option>
+<option>Black</option>
+<option>Gold</option>
+<option>Silver</option>
+<option>Beige</option>
+</select>
+</div>
+
+
+<div>
+<label>Occasion</label>
+
+<select id="occasion">
+<option>Just Because</option>
+<option>Birthday</option>
+<option>Anniversary</option>
+<option>Valentine's Day</option>
+<option>Graduation</option>
+<option>Mother's Day</option>
+<option>Wedding</option>
+<option>Congratulations</option>
+<option>Apology</option>
+<option>Sympathy</option>
+<option>Funeral</option>
+<option>Other</option>
+</select>
+</div>
+
+</div>
+
+</div>
+
+
+<div style="margin-top:20px;">
+
+<label>Card / Message</label>
 
 <textarea
-name="Delivery Address"
-placeholder="Enter your complete delivery address"
+id="cardMessage"
+placeholder="Write the message you want on the card..."
 ></textarea>
 
+</div>
 
 
-<label>
-Preferred Date
-</label>
+<div style="margin-top:15px;">
 
-<input
-type="date"
-name="Preferred Date"
-required
->
-
-
-
-<label>
-Preferred Time
-</label>
-
-<input
-type="time"
-name="Preferred Time"
-required
->
-
-
-
-<label>
-Special Request
-</label>
+<label>Special Requests</label>
 
 <textarea
-name="Special Request"
-placeholder="Tell us about your bouquet, wrapper, ribbon, card message, etc."
+id="specialRequest"
+placeholder="Example: I want a soft romantic style, lots of fillers, minimalist wrapper, etc."
 ></textarea>
 
+</div>
 
 
 <button
 class="btn"
-type="submit"
+type="button"
+onclick="addToCart()"
 >
-Send Inquiry 💌
++ Add to Inquiry Cart 💐
 </button>
 
 
-<p class="small-note">
+<div class="cart-box">
 
-This is an inquiry only.
-Your order will be confirmed after we contact you.
+<h3>
+🛒 Your Inquiry Cart
+</h3>
 
+<div id="cartItems">
+
+<p class="empty">
+Your inquiry cart is empty.
 </p>
-
-</form>
-
-
-
-<div style="text-align:center; margin-top:25px;">
-
-<p>
-Prefer Messenger?
-</p>
-
-
-<a
-class="btn"
-href="https://www.facebook.com/share/1LmTdvJTVe/?mibextid=wwXIfr"
-target="_blank"
->
-💬 Message Us
-</a>
-
-
-<br>
-
-
-<a
-class="btn"
-href="tel:09999767402"
->
-📞 09999767402
-</a>
 
 </div>
 
+</div>
+
+
+<div style="margin-top:30px;">
+
+<h3 style="font-family:Georgia,serif;color:#8e465e;font-weight:normal;">
+Delivery Details
+</h3>
+
+</div>
+
+
+<div class="form-grid" style="margin-top:15px;">
+
+
+<div>
+<label>Your Full Name</label>
+
+<input
+id="customerName"
+type="text"
+placeholder="Full name"
+>
+</div>
+
+
+<div>
+<label>Contact Number</label>
+
+<input
+id="customerPhone"
+type="tel"
+placeholder="09XXXXXXXXX"
+>
+</div>
+
+
+<div>
+<label>Order Type</label>
+
+<select id="orderType">
+<option>Pickup</option>
+<option>Delivery</option>
+</select>
+</div>
+
+
+<div>
+<label>Delivery Service</label>
+
+<select id="deliveryService">
+<option>Not applicable - Pickup</option>
+<option>Lalamove</option>
+<option>GrabExpress</option>
+</select>
+</div>
+
+
+<div class="full">
+<label>Delivery Address</label>
+
+<textarea
+id="address"
+placeholder="Complete delivery address"
+></textarea>
+</div>
+
+
+<div>
+<label>Preferred Date</label>
+
+<input
+id="date"
+type="date"
+>
+</div>
+
+
+<div>
+<label>Preferred Time</label>
+
+<input
+id="time"
+type="time"
+>
+</div>
+
+</div>
+
+
+<div class="custom-options" style="margin-top:25px;">
+
+<h3>Payment</h3>
+
+<p style="font-size:13px;">
+Payment will be arranged <strong>after we confirm your flower availability and current price.</strong>
+</p>
+
+<div class="option-grid" style="margin-top:15px;">
+
+<label>
+<input type="checkbox" name="payment" value="GCash">
+ GCash
+</label>
+
+<label>
+<input type="checkbox" name="payment" value="Maya">
+ Maya
+</label>
+
+<label>
+<input type="checkbox" name="payment" value="MariBank">
+ MariBank
+</label>
+
+<label>
+<input type="checkbox" name="payment" value="GoTyme">
+ GoTyme
+</label>
+
+<label>
+<input type="checkbox" name="payment" value="Bank Transfer">
+ Bank Transfer
+</label>
+
+</div>
+
+</div>
+
+
+<div class="summary" id="summary">
+
+<h3>Order Inquiry Summary</h3>
+
+<div id="summaryContent"></div>
+
+</div>
+
+
+<div style="text-align:center;margin-top:20px;">
+
+<button
+class="btn"
+type="button"
+onclick="showSummary()"
+>
+Review Inquiry
+</button>
+
+
+<button
+class="btn"
+type="button"
+onclick="sendMessenger()"
+>
+💬 Send Inquiry on Messenger
+</button>
+
+</div>
+
+
+<p class="note">
+Your request is an inquiry only. No payment is required through this website.
+We'll confirm availability and price with you first.
+</p>
 
 </div>
 
 </section>
 
 
+<section class="section" id="how">
 
-<!-- =========================
-     CONTACT
-========================= -->
+<div class="section-title">
+<span>Simple & Easy</span>
+<h2>How It Works</h2>
+</div>
+
+<div class="info">
+
+<p>🌸 <strong>1.</strong> Choose your flowers</p>
+
+<p>🎀 <strong>2.</strong> Customize your arrangement</p>
+
+<p>🛒 <strong>3.</strong> Add your selections to your inquiry cart</p>
+
+<p>📦 <strong>4.</strong> Enter pickup or delivery details</p>
+
+<p>💌 <strong>5.</strong> Send your inquiry through Messenger</p>
+
+<p>💰 <strong>6.</strong> We'll check availability and give you the current price</p>
+
+<p>💳 <strong>7.</strong> Choose your payment method after confirmation</p>
+
+</div>
+
+</section>
+
 
 <section class="section" id="contact">
 
 <div class="section-title">
-
 <span>Get In Touch</span>
-
-<h2>
-Contact Us
-</h2>
-
+<h2>Contact Soleil</h2>
 </div>
-
 
 <div class="contact-box">
 
-<p>
-📍 Dangwa, Manila, Philippines
-</p>
+<p>📍 Dangwa, Manila, Philippines</p>
 
-<p>
-🚚 Pickup & Delivery Only
-</p>
+<p>🚚 Pickup & Delivery Only</p>
 
-<p>
-❌ No Walk-ins
-</p>
+<p>❌ No Walk-ins</p>
 
-<p>
-📞 09999767402
-</p>
-
+<p>📞 09999767402</p>
 
 <br>
-
 
 <a
 class="btn"
@@ -1404,13 +1065,12 @@ href="tel:09999767402"
 📞 Call Us
 </a>
 
-
 <a
 class="btn"
 href="https://www.facebook.com/share/1LmTdvJTVe/?mibextid=wwXIfr"
 target="_blank"
 >
-💬 Facebook / Messenger
+💬 Messenger
 </a>
 
 </div>
@@ -1418,31 +1078,522 @@ target="_blank"
 </section>
 
 
-
-<!-- =========================
-     FOOTER
-========================= -->
-
 <footer>
 
-<p>
-Soleil Flower Store
-</p>
+<p>Soleil Flower Store</p>
 
-<p>
-Dangwa, Manila, Philippines
-</p>
+<p>Dangwa, Manila, Philippines</p>
 
-<p>
-📞 09999767402
-</p>
+<p>09999767402</p>
 
-<p>
-© 2026 Soleil Flower Store
-</p>
+<p>© 2026 Soleil Flower Store</p>
 
 </footer>
 
+
+<script>
+
+let cart = [];
+
+
+/* =========================
+   CHOOSE FLOWER
+========================= */
+
+function chooseFlower(name) {
+
+    document.getElementById("flower").value = name;
+
+    document.getElementById("inquiry").scrollIntoView({
+        behavior: "smooth"
+    });
+}
+
+
+/* =========================
+   ADD TO CART
+========================= */
+
+function addToCart() {
+
+    const flower =
+        document.getElementById("flower").value;
+
+    const quantity =
+        document.getElementById("quantity").value;
+
+    const color =
+        document.getElementById("color").value;
+
+    const wrapper =
+        document.getElementById("wrapper").value;
+
+    const ribbon =
+        document.getElementById("ribbon").value;
+
+    const occasion =
+        document.getElementById("occasion").value;
+
+    const cardMessage =
+        document.getElementById("cardMessage").value;
+
+    const specialRequest =
+        document.getElementById("specialRequest").value;
+
+
+    if (!flower) {
+
+        alert("Please select a flower first.");
+
+        return;
+    }
+
+
+    const item = {
+
+        flower: flower,
+
+        quantity: quantity,
+
+        color: color,
+
+        wrapper: wrapper,
+
+        ribbon: ribbon,
+
+        occasion: occasion,
+
+        cardMessage: cardMessage,
+
+        specialRequest: specialRequest
+
+    };
+
+
+    cart.push(item);
+
+    renderCart();
+
+    alert(
+        flower +
+        " has been added to your inquiry cart."
+    );
+}
+
+
+/* =========================
+   DISPLAY CART
+========================= */
+
+function renderCart() {
+
+    const container =
+        document.getElementById("cartItems");
+
+
+    if (cart.length === 0) {
+
+        container.innerHTML =
+            '<p class="empty">Your inquiry cart is empty.</p>';
+
+        return;
+    }
+
+
+    container.innerHTML = "";
+
+
+    cart.forEach(function(item,index) {
+
+        const div =
+            document.createElement("div");
+
+        div.className = "cart-item";
+
+
+        div.innerHTML = `
+
+        <button onclick="removeItem(${index})">
+        Remove
+        </button>
+
+        <strong>
+        ${item.flower}
+        </strong>
+
+        <br>
+
+        Quantity:
+        ${item.quantity}
+
+        <br>
+
+        Color:
+        ${item.color}
+
+        <br>
+
+        Wrapper:
+        ${item.wrapper}
+
+        <br>
+
+        Ribbon:
+        ${item.ribbon}
+
+        <br>
+
+        Occasion:
+        ${item.occasion}
+
+        `;
+
+
+        container.appendChild(div);
+
+    });
+
+}
+
+
+/* =========================
+   REMOVE ITEM
+========================= */
+
+function removeItem(index) {
+
+    cart.splice(index,1);
+
+    renderCart();
+
+}
+
+
+/* =========================
+   GET PAYMENT METHODS
+========================= */
+
+function getPayments() {
+
+    const selected =
+        document.querySelectorAll(
+            'input[name="payment"]:checked'
+        );
+
+    let payments = [];
+
+    selected.forEach(function(item) {
+
+        payments.push(item.value);
+
+    });
+
+    return payments.length
+        ? payments.join(", ")
+        : "To be discussed";
+
+}
+
+
+/* =========================
+   SUMMARY
+========================= */
+
+function showSummary() {
+
+    if (cart.length === 0) {
+
+        alert(
+            "Please add at least one flower to your inquiry cart."
+        );
+
+        return;
+    }
+
+
+    const name =
+        document.getElementById("customerName").value;
+
+    const phone =
+        document.getElementById("customerPhone").value;
+
+    const orderType =
+        document.getElementById("orderType").value;
+
+    const deliveryService =
+        document.getElementById("deliveryService").value;
+
+    const address =
+        document.getElementById("address").value;
+
+    const date =
+        document.getElementById("date").value;
+
+    const time =
+        document.getElementById("time").value;
+
+
+    let html = "";
+
+
+    html += "<p><strong>Customer:</strong> " +
+        (name || "Not provided") +
+        "</p>";
+
+    html += "<p><strong>Contact:</strong> " +
+        (phone || "Not provided") +
+        "</p>";
+
+
+    html += "<br>";
+
+
+    cart.forEach(function(item,index) {
+
+        html += `
+        <p>
+        <strong>${index + 1}. ${item.flower}</strong><br>
+        Quantity: ${item.quantity}<br>
+        Flower Color: ${item.color}<br>
+        Wrapper: ${item.wrapper}<br>
+        Ribbon: ${item.ribbon}<br>
+        Occasion: ${item.occasion}
+        </p>
+        <br>
+        `;
+
+    });
+
+
+    html += "<p><strong>Order Type:</strong> " +
+        orderType +
+        "</p>";
+
+    html += "<p><strong>Delivery Service:</strong> " +
+        deliveryService +
+        "</p>";
+
+    html += "<p><strong>Address:</strong> " +
+        (address || "Not applicable") +
+        "</p>";
+
+    html += "<p><strong>Date:</strong> " +
+        (date || "To be discussed") +
+        "</p>";
+
+    html += "<p><strong>Time:</strong> " +
+        (time || "To be discussed") +
+        "</p>";
+
+    html += "<p><strong>Payment:</strong> " +
+        getPayments() +
+        "</p>";
+
+    html += `
+    <br>
+    <p>
+    <strong>Price:</strong>
+    To be confirmed after checking flower availability.
+    </p>
+    `;
+
+
+    document.getElementById(
+        "summaryContent"
+    ).innerHTML = html;
+
+
+    document.getElementById(
+        "summary"
+    ).style.display = "block";
+
+
+    document.getElementById(
+        "summary"
+    ).scrollIntoView({
+        behavior: "smooth"
+    });
+
+}
+
+
+/* =========================
+   SEND MESSENGER
+========================= */
+
+function sendMessenger() {
+
+    if (cart.length === 0) {
+
+        alert(
+            "Please add at least one flower to your inquiry cart."
+        );
+
+        return;
+    }
+
+
+    const name =
+        document.getElementById("customerName").value;
+
+    const phone =
+        document.getElementById("customerPhone").value;
+
+    const orderType =
+        document.getElementById("orderType").value;
+
+    const deliveryService =
+        document.getElementById("deliveryService").value;
+
+    const address =
+        document.getElementById("address").value;
+
+    const date =
+        document.getElementById("date").value;
+
+    const time =
+        document.getElementById("time").value;
+
+
+    let message =
+        "🌸 HELLO SOLEIL FLOWER STORE!%0A%0A";
+
+    message +=
+        "I would like to make an inquiry.%0A%0A";
+
+
+    message +=
+        "👤 Name: " +
+        encodeURIComponent(name || "Not provided") +
+        "%0A";
+
+    message +=
+        "📞 Contact: " +
+        encodeURIComponent(phone || "Not provided") +
+        "%0A%0A";
+
+
+    message +=
+        "💐 FLOWER REQUEST:%0A";
+
+
+    cart.forEach(function(item,index) {
+
+        message +=
+            "%0A" +
+            (index + 1) +
+            ". " +
+            encodeURIComponent(item.flower) +
+            "%0A";
+
+        message +=
+            "Quantity: " +
+            encodeURIComponent(item.quantity) +
+            "%0A";
+
+        message +=
+            "Color: " +
+            encodeURIComponent(item.color) +
+            "%0A";
+
+        message +=
+            "Wrapper: " +
+            encodeURIComponent(item.wrapper) +
+            "%0A";
+
+        message +=
+            "Ribbon: " +
+            encodeURIComponent(item.ribbon) +
+            "%0A";
+
+        message +=
+            "Occasion: " +
+            encodeURIComponent(item.occasion) +
+            "%0A";
+
+        if(item.cardMessage) {
+
+            message +=
+                "Card Message: " +
+                encodeURIComponent(item.cardMessage) +
+                "%0A";
+
+        }
+
+        if(item.specialRequest) {
+
+            message +=
+                "Special Request: " +
+                encodeURIComponent(item.specialRequest) +
+                "%0A";
+
+        }
+
+    });
+
+
+    message +=
+        "%0A📦 Order Type: " +
+        encodeURIComponent(orderType) +
+        "%0A";
+
+
+    message +=
+        "🚚 Delivery Service: " +
+        encodeURIComponent(deliveryService) +
+        "%0A";
+
+
+    message +=
+        "📍 Address: " +
+        encodeURIComponent(address || "Not applicable") +
+        "%0A";
+
+
+    message +=
+        "📅 Date: " +
+        encodeURIComponent(date || "To be discussed") +
+        "%0A";
+
+
+    message +=
+        "⏰ Time: " +
+        encodeURIComponent(time || "To be discussed") +
+        "%0A";
+
+
+    message +=
+        "💳 Payment: " +
+        encodeURIComponent(getPayments()) +
+        "%0A%0A";
+
+
+    message +=
+        "💰 Please send me the current price and availability.%0A%0A";
+
+    message +=
+        "Thank you! 🌷";
+
+
+    const messengerURL =
+        "https://www.facebook.com/share/1LmTdvJTVe/?mibextid=wwXIfr";
+
+
+    window.open(
+        messengerURL,
+        "_blank"
+    );
+
+}
+
+
+/* =========================
+   INITIALIZE
+========================= */
+
+renderCart();
+
+</script>
 
 </body>
 </html>
