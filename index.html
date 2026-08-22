@@ -4,2262 +4,2376 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Soleil Flower Store | Dangwa Manila</title>
+<title>Bloom & Petals | Flower Shop</title>
 
 <style>
-
-/* =========================
-   GENERAL
-========================= */
-
-*{
-    box-sizing:border-box;
-    margin:0;
-    padding:0;
+:root {
+  --pink:#c95778;
+  --pink-dark:#a63d5c;
+  --pink-light:#fff0f4;
+  --cream:#fffaf7;
+  --green:#66866b;
+  --dark:#292326;
+  --gray:#777;
+  --border:#eadde1;
+  --white:#fff;
+  --red:#d9534f;
+  --orange:#e89b38;
+  --shadow:0 10px 30px rgba(50,20,30,.08);
 }
 
-html{
-    scroll-behavior:smooth;
+* {
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
 }
 
-body{
-    font-family:Arial, sans-serif;
-    background:#fff9fb;
-    color:#5d414a;
-    line-height:1.6;
+html {
+  scroll-behavior:smooth;
+}
+
+body {
+  font-family:Arial,Helvetica,sans-serif;
+  background:var(--cream);
+  color:var(--dark);
 }
 
 button,
 input,
-select,
-textarea{
-    font-family:inherit;
+textarea,
+select {
+  font:inherit;
 }
 
-
-/* =========================
-   HEADER
-========================= */
-
-header{
-    background:#fff0f5;
-    padding:18px 15px 10px;
-    position:sticky;
-    top:0;
-    z-index:1000;
-    box-shadow:0 3px 18px rgba(110,60,80,.08);
+button {
+  cursor:pointer;
 }
 
-.logo{
-    text-align:center;
-    font-family:Georgia,serif;
-    font-size:31px;
-    color:#91465e;
+img {
+  max-width:100%;
 }
 
-.tagline{
-    text-align:center;
-    font-family:Georgia,serif;
-    font-style:italic;
-    font-size:13px;
-    color:#ad687d;
+.hidden {
+  display:none!important;
 }
 
+/* NAV */
 
-/* =========================
-   MAIN NAV
-========================= */
-
-.main-nav{
-    display:flex;
-    justify-content:center;
-    gap:25px;
-    margin-top:15px;
+header {
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:rgba(255,255,255,.96);
+  border-bottom:1px solid var(--border);
+  backdrop-filter:blur(10px);
 }
 
-.main-nav button{
-    border:none;
-    background:none;
-    cursor:pointer;
-    color:#684750;
-    font-size:14px;
-    font-weight:bold;
+.nav {
+  max-width:1250px;
+  height:72px;
+  margin:auto;
+  padding:0 20px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
 }
 
-.main-nav button:hover,
-.main-nav button.active{
-    color:#b65372;
+.logo {
+  font-size:24px;
+  font-weight:800;
+  color:var(--pink-dark);
+  white-space:nowrap;
 }
 
+.nav-links {
+  display:flex;
+  gap:25px;
+  list-style:none;
+}
 
-/* =========================
-   PAGE SYSTEM
-========================= */
+.nav-links a {
+  text-decoration:none;
+  color:var(--dark);
+  font-weight:600;
+}
 
-.page{
+.nav-links a:hover {
+  color:var(--pink);
+}
+
+.nav-actions {
+  display:flex;
+  gap:8px;
+}
+
+.nav-btn {
+  border:0;
+  background:var(--pink-light);
+  color:var(--pink-dark);
+  padding:10px 15px;
+  border-radius:25px;
+  font-weight:700;
+}
+
+/* HERO */
+
+.hero {
+  min-height:620px;
+  display:flex;
+  align-items:center;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(255,250,247,.97),
+      rgba(255,250,247,.72)
+    ),
+    url("https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=1800&q=85")
+    center/cover;
+}
+
+.hero-inner {
+  max-width:1250px;
+  width:100%;
+  margin:auto;
+  padding:70px 20px;
+}
+
+.hero h1 {
+  max-width:700px;
+  font-size:clamp(44px,7vw,78px);
+  line-height:1.02;
+}
+
+.hero p {
+  max-width:600px;
+  margin:25px 0;
+  color:var(--gray);
+  font-size:19px;
+}
+
+.primary {
+  background:var(--pink);
+  color:white;
+  border:0;
+  border-radius:30px;
+  padding:15px 25px;
+  font-weight:800;
+}
+
+.primary:hover {
+  background:var(--pink-dark);
+}
+
+/* GENERAL */
+
+section {
+  padding:80px 20px;
+}
+
+.container {
+  max-width:1250px;
+  margin:auto;
+}
+
+.section-title {
+  text-align:center;
+  margin-bottom:40px;
+}
+
+.section-title h2 {
+  font-size:40px;
+}
+
+.section-title p {
+  margin-top:8px;
+  color:var(--gray);
+}
+
+/* SHOP */
+
+.shop-controls {
+  display:flex;
+  justify-content:space-between;
+  gap:15px;
+  flex-wrap:wrap;
+  margin-bottom:30px;
+}
+
+.search {
+  flex:1;
+  min-width:240px;
+  padding:14px 18px;
+  border:1px solid var(--border);
+  border-radius:30px;
+  outline:none;
+  background:white;
+}
+
+.categories {
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+}
+
+.category {
+  border:1px solid var(--border);
+  background:white;
+  padding:10px 15px;
+  border-radius:25px;
+}
+
+.category.active,
+.category:hover {
+  background:var(--pink);
+  color:white;
+  border-color:var(--pink);
+}
+
+.products {
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:25px;
+}
+
+.product {
+  background:white;
+  border:1px solid var(--border);
+  border-radius:20px;
+  overflow:hidden;
+  box-shadow:0 4px 15px rgba(0,0,0,.03);
+  transition:.2s;
+}
+
+.product:hover {
+  transform:translateY(-4px);
+  box-shadow:var(--shadow);
+}
+
+.product-image {
+  height:260px;
+  width:100%;
+  object-fit:cover;
+}
+
+.product-info {
+  padding:18px;
+}
+
+.badge {
+  color:var(--pink);
+  font-size:12px;
+  font-weight:800;
+  text-transform:uppercase;
+}
+
+.product h3 {
+  margin:5px 0;
+}
+
+.product p {
+  color:var(--gray);
+  font-size:14px;
+  min-height:42px;
+}
+
+.product-bottom {
+  margin-top:18px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.price {
+  font-size:19px;
+  font-weight:800;
+}
+
+.add {
+  border:0;
+  background:var(--pink-light);
+  color:var(--pink-dark);
+  padding:9px 13px;
+  border-radius:20px;
+  font-weight:700;
+}
+
+.add:hover {
+  background:var(--pink);
+  color:white;
+}
+
+.stock {
+  font-size:12px;
+  color:var(--gray);
+  margin-top:5px;
+}
+
+/* FEATURES */
+
+.features {
+  background:var(--pink-light);
+}
+
+.feature-grid {
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:20px;
+}
+
+.feature {
+  background:white;
+  padding:30px;
+  text-align:center;
+  border-radius:20px;
+}
+
+.feature-icon {
+  font-size:38px;
+}
+
+.feature h3 {
+  margin:10px 0;
+}
+
+.feature p {
+  color:var(--gray);
+  font-size:14px;
+}
+
+/* CART */
+
+.overlay {
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.45);
+  z-index:2000;
+  display:none;
+}
+
+.overlay.active {
+  display:block;
+}
+
+.drawer {
+  position:absolute;
+  right:0;
+  top:0;
+  height:100%;
+  width:min(470px,100%);
+  background:white;
+  overflow-y:auto;
+  padding:25px;
+}
+
+.drawer-header {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:25px;
+}
+
+.close {
+  border:0;
+  background:transparent;
+  font-size:30px;
+}
+
+.cart-item {
+  display:flex;
+  gap:12px;
+  border-bottom:1px solid var(--border);
+  padding:15px 0;
+}
+
+.cart-item img {
+  width:75px;
+  height:75px;
+  object-fit:cover;
+  border-radius:12px;
+}
+
+.cart-info {
+  flex:1;
+}
+
+.quantity {
+  display:flex;
+  gap:8px;
+  align-items:center;
+  margin-top:7px;
+}
+
+.quantity button {
+  width:27px;
+  height:27px;
+  border:1px solid var(--border);
+  border-radius:50%;
+  background:white;
+}
+
+.remove {
+  color:var(--red);
+  background:none;
+  border:0;
+  font-size:12px;
+  margin-top:4px;
+}
+
+.cart-summary {
+  margin-top:25px;
+  border-top:2px solid var(--dark);
+  padding-top:20px;
+}
+
+.summary-row {
+  display:flex;
+  justify-content:space-between;
+  margin:8px 0;
+}
+
+.checkout-btn {
+  width:100%;
+  border:0;
+  padding:15px;
+  border-radius:30px;
+  background:var(--pink);
+  color:white;
+  font-weight:800;
+  margin-top:15px;
+}
+
+/* FORM */
+
+.form {
+  margin-top:25px;
+  border-top:1px solid var(--border);
+  padding-top:20px;
+}
+
+.form h3 {
+  margin-bottom:15px;
+}
+
+.field {
+  margin-bottom:13px;
+}
+
+.field label {
+  display:block;
+  margin-bottom:5px;
+  font-size:13px;
+  font-weight:700;
+}
+
+.field input,
+.field textarea,
+.field select {
+  width:100%;
+  padding:12px;
+  border:1px solid var(--border);
+  border-radius:9px;
+  outline:none;
+}
+
+.field textarea {
+  min-height:80px;
+  resize:vertical;
+}
+
+/* ADMIN */
+
+.admin-section {
+  background:#f5f5f7;
+}
+
+.admin-header {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:15px;
+  margin-bottom:30px;
+}
+
+.admin-header h2 {
+  font-size:38px;
+}
+
+.stats {
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:18px;
+}
+
+.stat {
+  background:white;
+  padding:25px;
+  border-radius:18px;
+  box-shadow:var(--shadow);
+}
+
+.stat-icon {
+  font-size:30px;
+}
+
+.stat-name {
+  color:var(--gray);
+  margin-top:8px;
+}
+
+.stat-value {
+  font-size:30px;
+  font-weight:800;
+  margin-top:5px;
+}
+
+.admin-grid {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:25px;
+  margin-top:25px;
+}
+
+.panel {
+  background:white;
+  padding:25px;
+  border-radius:18px;
+  box-shadow:var(--shadow);
+  overflow:auto;
+}
+
+.panel h3 {
+  margin-bottom:20px;
+}
+
+table {
+  width:100%;
+  border-collapse:collapse;
+  min-width:600px;
+}
+
+th,
+td {
+  text-align:left;
+  padding:12px;
+  border-bottom:1px solid var(--border);
+  font-size:14px;
+}
+
+.status {
+  padding:5px 9px;
+  border-radius:15px;
+  background:#eee;
+  font-size:12px;
+  font-weight:700;
+}
+
+.status.pending {
+  background:#fff0d5;
+  color:#a96b00;
+}
+
+.status.confirmed {
+  background:#e6f1ff;
+  color:#2266aa;
+}
+
+.status.preparing {
+  background:#f3e9ff;
+  color:#7741a8;
+}
+
+.status.ready {
+  background:#e5f7e8;
+  color:#398344;
+}
+
+.status.out_for_delivery {
+  background:#e4f4f7;
+  color:#237684;
+}
+
+.status.delivered {
+  background:#dff4e2;
+  color:#277638;
+}
+
+.status.cancelled {
+  background:#ffe4e4;
+  color:#b33333;
+}
+
+.admin-select {
+  padding:7px;
+  border:1px solid var(--border);
+  border-radius:7px;
+}
+
+/* MODAL */
+
+.modal {
+  position:fixed;
+  inset:0;
+  z-index:3000;
+  background:rgba(0,0,0,.5);
+  display:none;
+  align-items:center;
+  justify-content:center;
+  padding:20px;
+}
+
+.modal.active {
+  display:flex;
+}
+
+.modal-content {
+  background:white;
+  width:min(600px,100%);
+  max-height:90vh;
+  overflow:auto;
+  border-radius:20px;
+  padding:30px;
+}
+
+.modal-header {
+  display:flex;
+  justify-content:space-between;
+  margin-bottom:25px;
+}
+
+/* FOOTER */
+
+footer {
+  background:#30292b;
+  color:white;
+  padding:50px 20px;
+}
+
+.footer-grid {
+  max-width:1250px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:2fr 1fr 1fr;
+  gap:40px;
+}
+
+footer p {
+  color:#ccc;
+  margin-top:8px;
+}
+
+/* TOAST */
+
+.toast {
+  position:fixed;
+  bottom:25px;
+  right:25px;
+  background:#292326;
+  color:white;
+  padding:14px 20px;
+  border-radius:12px;
+  z-index:5000;
+  transform:translateY(100px);
+  opacity:0;
+  transition:.3s;
+}
+
+.toast.show {
+  transform:translateY(0);
+  opacity:1;
+}
+
+/* MOBILE */
+
+@media(max-width:1000px) {
+
+  .products {
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .feature-grid,
+  .stats {
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .nav-links {
     display:none;
-}
-
-.page.active{
-    display:block;
-}
-
-
-/* =========================
-   HERO
-========================= */
-
-.hero{
-    min-height:530px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    padding:70px 20px;
-
-    background:
-    radial-gradient(circle at top left,#ffe0eb,transparent 35%),
-    radial-gradient(circle at bottom right,#f7dce7,transparent 35%),
-    #fff9fb;
-}
-
-.hero-content{
-    max-width:760px;
-}
-
-.hero-small{
-    text-transform:uppercase;
-    letter-spacing:3px;
-    font-size:12px;
-    color:#b35d76;
-    margin-bottom:15px;
-}
-
-.hero h1{
-    font-family:Georgia,serif;
-    font-size:50px;
-    font-weight:normal;
-    line-height:1.15;
-    color:#8e465e;
-    margin-bottom:20px;
-}
-
-.hero p{
-    max-width:650px;
-    margin:8px auto;
-    font-size:16px;
-}
-
-
-/* =========================
-   BUTTONS
-========================= */
-
-.btn{
-    display:inline-block;
-    border:none;
-    border-radius:30px;
-    padding:12px 23px;
-    margin:6px;
-    background:#b95d79;
-    color:white;
-    cursor:pointer;
-    text-decoration:none;
-    font-size:14px;
-    transition:.25s;
-}
-
-.btn:hover{
-    background:#8e465e;
-    transform:translateY(-2px);
-}
-
-.btn-light{
-    background:#f5d2de;
-    color:#7d4053;
-}
-
-
-/* =========================
-   SECTIONS
-========================= */
-
-.section{
-    max-width:1150px;
-    margin:auto;
-    padding:65px 20px;
-}
-
-.section-title{
-    text-align:center;
-    margin-bottom:35px;
-}
-
-.section-title span{
-    text-transform:uppercase;
-    letter-spacing:3px;
-    font-size:11px;
-    color:#b35d76;
-}
-
-.section-title h2{
-    font-family:Georgia,serif;
-    font-size:39px;
-    font-weight:normal;
-    color:#8e465e;
-}
-
-
-/* =========================
-   FLOWER CATEGORIES
-========================= */
-
-.flower-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:20px;
-}
-
-.flower-card{
-    min-height:240px;
-    padding:30px 20px;
-    text-align:center;
-
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-
-    border-radius:25px;
-    border:1px solid #efcbd7;
-
-    background:
-    linear-gradient(145deg,#fff0f5,#fce2eb);
-
-    box-shadow:
-    0 8px 25px rgba(130,70,90,.07);
-
-    transition:.25s;
-}
-
-.flower-card:nth-child(3n+2){
-    background:
-    linear-gradient(145deg,#fff7ed,#fcebdc);
-}
-
-.flower-card:nth-child(3n){
-    background:
-    linear-gradient(145deg,#fff4f7,#f6e5ee);
-}
-
-.flower-card:hover{
-    transform:translateY(-6px);
-    box-shadow:
-    0 12px 30px rgba(130,70,90,.12);
-}
-
-.flower-icon{
-    font-size:42px;
-    margin-bottom:10px;
-}
-
-.flower-card h3{
-    font-family:Georgia,serif;
-    font-size:25px;
-    font-weight:normal;
-    color:#8e465e;
-}
-
-.flower-card p{
-    font-size:13px;
-    max-width:280px;
-    margin:7px auto 13px;
-    color:#755861;
-}
-
-
-/* =========================
-   INQUIRY
-========================= */
-
-.inquiry-box{
-    max-width:900px;
-    margin:auto;
-    background:white;
-    padding:32px;
-    border-radius:25px;
-
-    box-shadow:
-    0 8px 30px rgba(120,70,90,.09);
-}
-
-.form-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:15px;
-}
-
-.full{
-    grid-column:1/-1;
-}
-
-label{
-    display:block;
-    font-size:13px;
-    font-weight:bold;
-    color:#684750;
-    margin-bottom:6px;
-}
-
-input,
-select,
-textarea{
-    width:100%;
-    padding:12px;
-
-    border:1px solid #e3c0cc;
-    border-radius:11px;
-
-    background:#fffafb;
-    color:#5d414a;
-
-    font-size:14px;
-    outline:none;
-}
-
-input:focus,
-select:focus,
-textarea:focus{
-    border-color:#c8758e;
-}
-
-textarea{
-    min-height:100px;
-    resize:vertical;
-}
-
-
-/* =========================
-   SELECTED FLOWER NOTICE
-========================= */
-
-.selected-flower{
-    display:none;
-
-    background:#fff0f5;
-    border:1px solid #ecc5d2;
-
-    border-radius:18px;
-
-    padding:15px 18px;
-
-    margin-bottom:20px;
-
-    text-align:center;
-}
-
-.selected-flower strong{
-    color:#91465e;
-}
-
-
-/* =========================
-   CUSTOMIZATION
-========================= */
-
-.custom-box{
-    background:#fff3f7;
-    border-radius:20px;
-    padding:20px;
-    margin-top:20px;
-}
-
-.custom-box h3{
-    font-family:Georgia,serif;
-    font-weight:normal;
-    color:#8e465e;
-    margin-bottom:15px;
-}
-
-.option-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:15px;
-}
-
-
-/* =========================
-   CART
-========================= */
-
-.cart{
-    background:#fff0f5;
-    border-radius:20px;
-    padding:20px;
-    margin-top:25px;
-}
-
-.cart h3{
-    font-family:Georgia,serif;
-    font-weight:normal;
-    color:#8e465e;
-}
-
-.cart-item{
-    background:white;
-    border-radius:13px;
-    padding:14px;
-    margin-top:10px;
-    font-size:13px;
-}
-
-.remove{
-    float:right;
-    border:none;
-    background:none;
-    color:#a34e68;
-    cursor:pointer;
-}
-
-.empty{
-    font-size:13px;
-    color:#806b72;
-    margin-top:8px;
-}
-
-
-/* =========================
-   SUMMARY
-========================= */
-
-.summary{
-    display:none;
-
-    background:#fffafb;
-
-    border:1px dashed #d8a5b5;
-
-    border-radius:18px;
-
-    padding:20px;
-
-    margin-top:20px;
-}
-
-.summary h3{
-    font-family:Georgia,serif;
-    font-weight:normal;
-    color:#8e465e;
-    margin-bottom:10px;
-}
-
-
-/* =========================
-   INFORMATION
-========================= */
-
-.info-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:18px;
-}
-
-.info-card{
-    background:white;
-    border:1px solid #efd0da;
-    border-radius:22px;
-    padding:25px;
-    text-align:center;
-    box-shadow:0 7px 20px rgba(130,70,90,.06);
-}
-
-.info-card h3{
-    font-family:Georgia,serif;
-    font-weight:normal;
-    color:#91465e;
-    margin-bottom:8px;
-}
-
-.info-card p{
-    font-size:13px;
-}
-
-
-/* =========================
-   CONTACT
-========================= */
-
-.contact-box{
-    max-width:700px;
-    margin:auto;
-
-    background:
-    linear-gradient(145deg,#fce3ec,#fff1f5);
-
-    border-radius:25px;
-
-    padding:40px 20px;
-
-    text-align:center;
-}
-
-.contact-box p{
-    margin:8px;
-}
-
-
-/* =========================
-   NOTE
-========================= */
-
-.note{
-    text-align:center;
-    font-size:13px;
-    color:#806a72;
-    margin:10px 0;
-}
-
-
-/* =========================
-   FOOTER
-========================= */
-
-footer{
-    background:#8e465e;
-    color:white;
-    text-align:center;
-    padding:30px 20px;
-}
-
-footer p{
-    font-size:13px;
-    margin:5px;
-}
-
-
-/* =========================
-   MOBILE
-========================= */
-
-@media(max-width:800px){
-
-    .flower-grid{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .info-grid{
-        grid-template-columns:1fr;
-    }
-
-    .hero h1{
-        font-size:40px;
-    }
+  }
 
 }
 
+@media(max-width:650px) {
 
-@media(max-width:600px){
+  .hero {
+    min-height:540px;
+  }
 
-    .logo{
-        font-size:26px;
-    }
+  .hero h1 {
+    font-size:48px;
+  }
 
-    .main-nav{
-        gap:15px;
-    }
+  section {
+    padding:55px 15px;
+  }
 
-    .main-nav button{
-        font-size:12px;
-    }
+  .products,
+  .feature-grid,
+  .stats,
+  .admin-grid {
+    grid-template-columns:1fr;
+  }
 
-    .flower-grid{
-        grid-template-columns:1fr 1fr;
-        gap:12px;
-    }
+  .footer-grid {
+    grid-template-columns:1fr;
+  }
 
-    .flower-card{
-        min-height:210px;
-        padding:20px 10px;
-    }
+  .logo {
+    font-size:19px;
+  }
 
-    .flower-card h3{
-        font-size:19px;
-    }
-
-    .flower-card p{
-        font-size:11px;
-    }
-
-    .flower-icon{
-        font-size:32px;
-    }
-
-    .form-grid{
-        grid-template-columns:1fr;
-    }
-
-    .full{
-        grid-column:auto;
-    }
-
-    .option-grid{
-        grid-template-columns:1fr;
-    }
-
-    .inquiry-box{
-        padding:20px 15px;
-    }
-
-    .hero h1{
-        font-size:34px;
-    }
+  .nav {
+    padding:0 12px;
+  }
 
 }
-
 </style>
 </head>
 
-
 <body>
 
-
-<!-- =========================
+<!-- ================================
      HEADER
-========================= -->
+================================ -->
 
 <header>
 
+<div class="nav">
+
 <div class="logo">
-Soleil Flower Store
+🌸 Bloom & Petals
 </div>
 
-<div class="tagline">
-flowers made with love
+<ul class="nav-links">
+
+<li>
+<a href="#home">Home</a>
+</li>
+
+<li>
+<a href="#shop">Shop</a>
+</li>
+
+<li>
+<a href="#services">Services</a>
+</li>
+
+<li>
+<a href="#admin">Admin</a>
+</li>
+
+</ul>
+
+<div class="nav-actions">
+
+<button
+class="nav-btn"
+onclick="openCart()"
+>
+🛒 <span id="cartCount">0</span>
+</button>
+
+<button
+class="nav-btn"
+onclick="openAdminLogin()"
+>
+🔐 Admin
+</button>
+
 </div>
 
-
-<nav class="main-nav">
-
-<button
-id="homeButton"
-class="active"
-onclick="showPage('home',this)"
->
-Home
-</button>
-
-<button
-onclick="showPage('flowers',this)"
->
-Flowers
-</button>
-
-<button
-onclick="showPage('inquiry',this)"
->
-Order / Inquiry
-</button>
-
-<button
-onclick="showPage('contact',this)"
->
-Contact
-</button>
-
-</nav>
+</div>
 
 </header>
 
 
-<!-- =========================
-     HOME PAGE
-========================= -->
+<!-- ================================
+     HOME
+================================ -->
 
-<div
+<section
+class="hero"
 id="home"
-class="page active"
 >
 
-<section class="hero">
+<div class="hero-inner">
 
-<div class="hero-content">
-
-<div class="hero-small">
-Dangwa • Manila • Philippines
-</div>
+<p
+style="
+font-weight:800;
+text-transform:uppercase;
+letter-spacing:3px;
+color:#a63d5c;
+"
+>
+Fresh flowers • Beautiful moments
+</p>
 
 <h1>
-Flowers for Every Beautiful Moment
+Flowers made
+for your special
+moments.
 </h1>
 
 <p>
-Fresh flowers, custom bouquets and thoughtful
-arrangements made especially for your special moments.
+Beautiful handcrafted flower arrangements for
+birthdays, anniversaries, graduations, weddings,
+sympathy and everyday celebrations.
 </p>
-
-<p>
-🚚 Pickup & Delivery Only
-</p>
-
-<p>
-❌ No Walk-ins
-</p>
-
-
-<div style="margin-top:25px;">
 
 <button
-class="btn"
-onclick="showPageByName('flowers')"
+class="primary"
+onclick="
+document.getElementById('shop')
+.scrollIntoView({behavior:'smooth'})
+"
 >
-Explore Flowers
+Shop Flowers
 </button>
-
-<button
-class="btn"
-onclick="showPageByName('inquiry')"
->
-Start an Inquiry 💌
-</button>
-
-</div>
-
-
-<a
-class="btn btn-light"
-href="https://m.me/soleilflowerstore"
-target="_blank"
->
-💬 Messenger
-</a>
 
 </div>
 
 </section>
 
 
-<section class="section">
+<!-- ================================
+     SHOP
+================================ -->
+
+<section id="shop">
+
+<div class="container">
 
 <div class="section-title">
 
-<span>
-Soleil Flower Store
-</span>
-
 <h2>
-Made for Your Moments
+Our Flowers
 </h2>
 
-</div>
-
-
-<div class="info-grid">
-
-
-<div class="info-card">
-
-<h3>
-🌸 Fresh Flowers
-</h3>
-
 <p>
-Our flowers depend on current market
-availability and supply.
+Choose something beautiful.
 </p>
 
 </div>
 
 
-<div class="info-card">
+<div class="shop-controls">
 
-<h3>
-🎀 Custom Designs
-</h3>
+<input
+id="search"
+class="search"
+placeholder="🔎 Search flowers..."
+oninput="renderProducts()"
+>
 
-<p>
-Choose your preferred colors, wrapper,
-ribbon and arrangement style.
-</p>
+<div class="categories">
+
+<button
+class="category active"
+onclick="setCategory('all',this)"
+>
+All
+</button>
+
+<button
+class="category"
+onclick="setCategory('birthday',this)"
+>
+Birthday
+</button>
+
+<button
+class="category"
+onclick="setCategory('romance',this)"
+>
+Romance
+</button>
+
+<button
+class="category"
+onclick="setCategory('anniversary',this)"
+>
+Anniversary
+</button>
+
+<button
+class="category"
+onclick="setCategory('graduation',this)"
+>
+Graduation
+</button>
+
+<button
+class="category"
+onclick="setCategory('sympathy',this)"
+>
+Sympathy
+</button>
 
 </div>
 
-
-<div class="info-card">
-
-<h3>
-🚚 Pickup & Delivery
-</h3>
-
-<p>
-We offer pickup and delivery.
-No walk-ins are accepted.
-</p>
-
 </div>
 
-</div>
-
-</section>
-
-</div>
-
-
-<!-- =========================
-     FLOWERS PAGE
-========================= -->
 
 <div
-id="flowers"
-class="page"
+class="products"
+id="products"
+>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================================
+     SERVICES
+================================ -->
+
+<section
+class="features"
+id="services"
 >
 
-<section class="section">
+<div class="container">
 
 <div class="section-title">
 
-<span>
-Our Collection
-</span>
-
 <h2>
-Choose Your Flowers
+Why Choose Us?
 </h2>
 
-<p class="note">
-Choose a category below to start your inquiry.
+<p>
+We make sending flowers easy.
 </p>
 
 </div>
 
 
-<div class="flower-grid">
+<div class="feature-grid">
 
+<div class="feature">
 
-<!-- TULIPS -->
-
-<div class="flower-card">
-
-<div class="flower-icon">
+<div class="feature-icon">
 🌷
 </div>
 
 <h3>
-Tulips
+Fresh Flowers
 </h3>
 
 <p>
-Elegant and delicate blooms for thoughtful gifts.
+Freshly selected flowers prepared
+with care.
 </p>
-
-<button
-class="btn"
-onclick="chooseFlower('Tulips')"
->
-Inquire
-</button>
 
 </div>
 
 
-<!-- CARNATION -->
+<div class="feature">
 
-<div class="flower-card">
-
-<div class="flower-icon">
-🌸
+<div class="feature-icon">
+🚚
 </div>
 
 <h3>
-Carnation
+Delivery
 </h3>
 
 <p>
-Beautiful flowers for birthdays and special moments.
+Convenient delivery scheduling
+for your order.
 </p>
-
-<button
-class="btn"
-onclick="chooseFlower('Carnation')"
->
-Inquire
-</button>
 
 </div>
 
 
-<!-- STARGAZER -->
+<div class="feature">
 
-<div class="flower-card">
-
-<div class="flower-icon">
-🌺
+<div class="feature-icon">
+💌
 </div>
 
 <h3>
-Stargazer
+Gift Messages
 </h3>
 
 <p>
-Elegant lilies for romantic arrangements.
+Add your own heartfelt message
+to your flowers.
 </p>
 
-<button
-class="btn"
-onclick="chooseFlower('Stargazer')"
->
-Inquire
-</button>
-
 </div>
 
 
-<!-- LOCAL ROSES -->
+<div class="feature">
 
-<div class="flower-card">
-
-<div class="flower-icon">
-🌹
-</div>
-
-<h3>
-Local Roses
-</h3>
-
-<p>
-Fresh local roses depending on availability.
-</p>
-
-<button
-class="btn"
-onclick="chooseFlower('Local Roses')"
->
-Inquire
-</button>
-
-</div>
-
-
-<!-- IMPORTED ROSES -->
-
-<div class="flower-card">
-
-<div class="flower-icon">
-🌹
-</div>
-
-<h3>
-Imported Roses
-</h3>
-
-<p>
-Premium imported roses for elegant bouquets.
-</p>
-
-<button
-class="btn"
-onclick="chooseFlower('Imported Roses')"
->
-Inquire
-</button>
-
-</div>
-
-
-<!-- PEONIES -->
-
-<div class="flower-card">
-
-<div class="flower-icon">
-🌸
-</div>
-
-<h3>
-Peonies
-</h3>
-
-<p>
-Soft romantic blooms for beautiful arrangements.
-</p>
-
-<button
-class="btn"
-onclick="chooseFlower('Peonies')"
->
-Inquire
-</button>
-
-</div>
-
-
-<!-- GERBERA -->
-
-<div class="flower-card">
-
-<div class="flower-icon">
-🌼
-</div>
-
-<h3>
-Gerbera
-</h3>
-
-<p>
-Bright and cheerful flowers full of color.
-</p>
-
-<button
-class="btn"
-onclick="chooseFlower('Gerbera')"
->
-Inquire
-</button>
-
-</div>
-
-
-<!-- LISIANTHUS -->
-
-<div class="flower-card">
-
-<div class="flower-icon">
-🌷
-</div>
-
-<h3>
-Lisianthus
-</h3>
-
-<p>
-Delicate flowers with an elegant appearance.
-</p>
-
-<button
-class="btn"
-onclick="chooseFlower('Lisianthus')"
->
-Inquire
-</button>
-
-</div>
-
-
-<!-- SUNFLOWER -->
-
-<div class="flower-card">
-
-<div class="flower-icon">
-🌻
-</div>
-
-<h3>
-Sunflower
-</h3>
-
-<p>
-Bright flowers that bring warmth and happiness.
-</p>
-
-<button
-class="btn"
-onclick="chooseFlower('Sunflower')"
->
-Inquire
-</button>
-
-</div>
-
-
-<!-- DRIED FLOWERS -->
-
-<div class="flower-card">
-
-<div class="flower-icon">
-🤍
-</div>
-
-<h3>
-Dried Flowers
-</h3>
-
-<p>
-Timeless arrangements that last longer.
-</p>
-
-<button
-class="btn"
-onclick="chooseFlower('Dried Flowers')"
->
-Inquire
-</button>
-
-</div>
-
-
-<!-- FILLERS -->
-
-<div class="flower-card">
-
-<div class="flower-icon">
-🌿
-</div>
-
-<h3>
-Fillers
-</h3>
-
-<p>
-Fresh fillers and greenery for arrangements.
-</p>
-
-<button
-class="btn"
-onclick="chooseFlower('Fillers')"
->
-Inquire
-</button>
-
-</div>
-
-
-<!-- CUSTOM BOUQUETS -->
-
-<div class="flower-card">
-
-<div class="flower-icon">
+<div class="feature-icon">
 💐
 </div>
 
 <h3>
-Custom Bouquets
+Custom Orders
 </h3>
 
 <p>
-Create a bouquet based on your preferences.
+Request a special arrangement
+made for you.
 </p>
 
-<button
-class="btn"
-onclick="chooseFlower('Custom Bouquets')"
->
-Inquire
-</button>
+</div>
 
 </div>
 
-
-<!-- WEDDING -->
-
-<div class="flower-card">
-
-<div class="flower-icon">
-👰
 </div>
-
-<h3>
-Wedding Bouquet
-</h3>
-
-<p>
-Elegant bouquets customized for your wedding.
-</p>
-
-<button
-class="btn"
-onclick="chooseFlower('Wedding Bouquet')"
->
-Inquire
-</button>
-
-</div>
-
-
-<!-- SYMPATHY -->
-
-<div class="flower-card">
-
-<div class="flower-icon">
-🤍
-</div>
-
-<h3>
-Sympathy Flowers
-</h3>
-
-<p>
-Thoughtful flowers expressing love and sympathy.
-</p>
-
-<button
-class="btn"
-onclick="chooseFlower('Sympathy Flowers')"
->
-Inquire
-</button>
-
-</div>
-
-
-<!-- FUNERAL -->
-
-<div class="flower-card">
-
-<div class="flower-icon">
-🕊️
-</div>
-
-<h3>
-Funeral Flowers
-</h3>
-
-<p>
-Respectful arrangements for memorial services.
-</p>
-
-<button
-class="btn"
-onclick="chooseFlower('Funeral Flowers')"
->
-Inquire
-</button>
-
-</div>
-
-
-</div>
-
-
-<p class="note" style="margin-top:30px;">
-
-🌸 Flower prices are not displayed because
-availability and market prices change regularly.
-
-</p>
 
 </section>
 
-</div>
 
+<!-- ================================
+     ADMIN
+================================ -->
 
-<!-- =========================
-     INQUIRY PAGE
-========================= -->
-
-<div
-id="inquiry"
-class="page"
+<section
+class="admin-section hidden"
+id="admin"
 >
 
-<section class="section">
+<div class="container">
 
-<div class="section-title">
+<div class="admin-header">
 
-<span>
-Online Inquiry
-</span>
+<div>
 
 <h2>
-Create Your Flower Request
+Business Dashboard
 </h2>
+
+<p style="color:#777">
+Manage your flower shop.
+</p>
+
+</div>
+
+<button
+class="primary"
+onclick="logoutAdmin()"
+>
+Logout
+</button>
 
 </div>
 
 
-<div class="inquiry-box">
+<div class="stats">
 
+<div class="stat">
 
-<!-- SELECTED FLOWER -->
+<div class="stat-icon">
+💰
+</div>
+
+<div class="stat-name">
+Total Sales
+</div>
 
 <div
-id="selectedFlower"
-class="selected-flower"
+class="stat-value"
+id="statSales"
+>
+₱0
+</div>
+
+</div>
+
+
+<div class="stat">
+
+<div class="stat-icon">
+📦
+</div>
+
+<div class="stat-name">
+Orders
+</div>
+
+<div
+class="stat-value"
+id="statOrders"
+>
+0
+</div>
+
+</div>
+
+
+<div class="stat">
+
+<div class="stat-icon">
+🌸
+</div>
+
+<div class="stat-name">
+Products
+</div>
+
+<div
+class="stat-value"
+id="statProducts"
+>
+0
+</div>
+
+</div>
+
+
+<div class="stat">
+
+<div class="stat-icon">
+👥
+</div>
+
+<div class="stat-name">
+Customers
+</div>
+
+<div
+class="stat-value"
+id="statCustomers"
+>
+0
+</div>
+
+</div>
+
+</div>
+
+
+<div class="admin-grid">
+
+
+<!-- ORDERS -->
+
+<div class="panel">
+
+<h3>
+Recent Orders
+</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>
+Order
+</th>
+
+<th>
+Customer
+</th>
+
+<th>
+Total
+</th>
+
+<th>
+Status
+</th>
+
+</tr>
+
+</thead>
+
+<tbody
+id="ordersTable"
+>
+</tbody>
+
+</table>
+
+</div>
+
+
+<!-- INVENTORY -->
+
+<div class="panel">
+
+<h3>
+Inventory
+</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>
+Product
+</th>
+
+<th>
+Stock
+</th>
+
+<th>
+Price
+</th>
+
+</tr>
+
+</thead>
+
+<tbody
+id="inventoryTable"
+>
+</tbody>
+
+</table>
+
+</div>
+
+</div>
+
+
+<div
+class="panel"
+style="margin-top:25px"
 >
 
-🌸 You selected:
+<h3>
+All Customers
+</h3>
 
-<strong id="selectedFlowerName">
-None
+<table>
+
+<thead>
+
+<tr>
+
+<th>
+Name
+</th>
+
+<th>
+Phone
+</th>
+
+<th>
+Orders
+</th>
+
+<th>
+Total Spent
+</th>
+
+</tr>
+
+</thead>
+
+<tbody
+id="customersTable"
+>
+</tbody>
+
+</table>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- ================================
+     FOOTER
+================================ -->
+
+<footer>
+
+<div class="footer-grid">
+
+<div>
+
+<h2>
+🌸 Bloom & Petals
+</h2>
+
+<p>
+Beautiful flowers for beautiful moments.
+</p>
+
+</div>
+
+
+<div>
+
+<h3>
+Contact
+</h3>
+
+<p>
+📞 09XX XXX XXXX
+</p>
+
+<p>
+📧 hello@bloomandpetals.com
+</p>
+
+</div>
+
+
+<div>
+
+<h3>
+Store
+</h3>
+
+<p>
+Same-day delivery
+</p>
+
+<p>
+Custom arrangements
+</p>
+
+<p>
+Wedding flowers
+</p>
+
+</div>
+
+</div>
+
+</footer>
+
+
+<!-- ================================
+     CART
+================================ -->
+
+<div
+class="overlay"
+id="cartOverlay"
+>
+
+<div class="drawer">
+
+<div class="drawer-header">
+
+<h2>
+Your Cart
+</h2>
+
+<button
+class="close"
+onclick="closeCart()"
+>
+×
+</button>
+
+</div>
+
+
+<div id="cartItems">
+</div>
+
+
+<div class="cart-summary">
+
+<div class="summary-row">
+
+<span>
+Subtotal
+</span>
+
+<strong>
+₱<span id="subtotal">0</span>
 </strong>
 
 </div>
 
 
-<p class="note">
+<div class="summary-row">
 
-No fixed flower prices are shown.
-We'll confirm the current price and availability
-with you through Messenger.
+<span>
+Delivery
+</span>
 
-</p>
-
-
-<!-- BASIC FLOWER -->
-
-<div class="form-grid" style="margin-top:25px;">
-
-
-<div>
-
-<label>
-Flower / Arrangement
-</label>
-
-<select id="flower">
-
-<option value="">
-Select a flower
-</option>
-
-<option>Tulips</option>
-<option>Carnation</option>
-<option>Stargazer</option>
-<option>Local Roses</option>
-<option>Imported Roses</option>
-<option>Peonies</option>
-<option>Gerbera</option>
-<option>Lisianthus</option>
-<option>Sunflower</option>
-<option>Dried Flowers</option>
-<option>Fillers</option>
-<option>Custom Bouquets</option>
-<option>Wedding Bouquet</option>
-<option>Sympathy Flowers</option>
-<option>Funeral Flowers</option>
-
-</select>
+<strong>
+₱<span id="delivery">0</span>
+</strong>
 
 </div>
 
 
-<div>
+<div class="summary-row">
 
-<label>
-Quantity / Stems
-</label>
+<strong>
+Total
+</strong>
 
-<input
-id="quantity"
-type="number"
-min="1"
-value="1"
-placeholder="Example: 12"
->
-
-</div>
-
-</div>
-
-
-<!-- CUSTOMIZATION -->
-
-<div class="custom-box">
-
-<h3>
-🎀 Customize Your Flowers
-</h3>
-
-
-<div class="option-grid">
-
-
-<div>
-
-<label>
-Flower Color
-</label>
-
-<select id="color">
-
-<option>
-Any / Let florist choose
-</option>
-
-<option>Red</option>
-<option>Pink</option>
-<option>White</option>
-<option>Yellow</option>
-<option>Orange</option>
-<option>Purple</option>
-<option>Blue</option>
-<option>Mixed Colors</option>
-
-</select>
-
-</div>
-
-
-<div>
-
-<label>
-Wrapper Color
-</label>
-
-<select id="wrapper">
-
-<option>
-Any / Let florist choose
-</option>
-
-<option>White</option>
-<option>Pink</option>
-<option>Red</option>
-<option>Black</option>
-<option>Brown / Kraft</option>
-<option>Beige</option>
-<option>Pastel</option>
-<option>Mixed</option>
-
-</select>
-
-</div>
-
-
-<div>
-
-<label>
-Ribbon Color
-</label>
-
-<select id="ribbon">
-
-<option>
-Any / Let florist choose
-</option>
-
-<option>White</option>
-<option>Pink</option>
-<option>Red</option>
-<option>Black</option>
-<option>Gold</option>
-<option>Silver</option>
-<option>Beige</option>
-
-</select>
-
-</div>
-
-
-<div>
-
-<label>
-Occasion
-</label>
-
-<select id="occasion">
-
-<option>Just Because</option>
-<option>Birthday</option>
-<option>Anniversary</option>
-<option>Valentine's Day</option>
-<option>Graduation</option>
-<option>Mother's Day</option>
-<option>Wedding</option>
-<option>Congratulations</option>
-<option>Apology</option>
-<option>Sympathy</option>
-<option>Funeral</option>
-<option>Other</option>
-
-</select>
-
-</div>
-
-</div>
-
-</div>
-
-
-<!-- CARD -->
-
-<div style="margin-top:20px;">
-
-<label>
-Card / Message
-</label>
-
-<textarea
-id="cardMessage"
-placeholder="Write the message you want on the card..."
-></textarea>
-
-</div>
-
-
-<!-- SPECIAL REQUEST -->
-
-<div style="margin-top:15px;">
-
-<label>
-Special Requests
-</label>
-
-<textarea
-id="specialRequest"
-placeholder="Example: romantic style, minimalist wrapper, pastel colors..."
-></textarea>
+<strong>
+₱<span id="total">0</span>
+</strong>
 
 </div>
 
 
 <button
-class="btn"
-type="button"
-onclick="addToCart()"
+class="checkout-btn"
+onclick="showCheckout()"
 >
-+ Add to Inquiry Cart 💐
+Proceed to Checkout
 </button>
 
 
-<!-- CART -->
-
-<div class="cart">
+<div
+class="form hidden"
+id="checkoutForm"
+>
 
 <h3>
-🛒 Your Inquiry Cart
+Delivery Information
 </h3>
 
-<div id="cartItems">
 
-<p class="empty">
-Your inquiry cart is empty.
-</p>
-
-</div>
-
-</div>
-
-
-<!-- CUSTOMER DETAILS -->
-
-<div style="margin-top:30px;">
-
-<h3
-style="
-font-family:Georgia,serif;
-color:#8e465e;
-font-weight:normal;
-"
->
-Customer & Delivery Details
-</h3>
-
-</div>
-
-
-<div
-class="form-grid"
-style="margin-top:15px;"
->
-
-
-<div>
+<div class="field">
 
 <label>
-Full Name
+Your Name *
 </label>
 
 <input
 id="customerName"
-type="text"
 placeholder="Your full name"
 >
 
 </div>
 
 
-<div>
+<div class="field">
 
 <label>
-Contact Number
+Phone *
 </label>
 
 <input
 id="customerPhone"
-type="tel"
 placeholder="09XXXXXXXXX"
-value="09999767402"
 >
 
 </div>
 
 
-<div>
+<div class="field">
 
 <label>
-Order Type
+Recipient Name *
 </label>
 
-<select id="orderType">
-
-<option>
-Pickup
-</option>
-
-<option>
-Delivery
-</option>
-
-</select>
+<input
+id="recipientName"
+placeholder="Recipient's name"
+>
 
 </div>
 
 
-<div>
+<div class="field">
 
 <label>
-Delivery Service
+Recipient Phone *
 </label>
 
-<select id="deliveryService">
-
-<option>
-Not applicable - Pickup
-</option>
-
-<option>
-Lalamove
-</option>
-
-<option>
-GrabExpress
-</option>
-
-</select>
+<input
+id="recipientPhone"
+placeholder="09XXXXXXXXX"
+>
 
 </div>
 
 
-<div class="full">
+<div class="field">
 
 <label>
-Delivery Address
+Delivery Address *
 </label>
 
 <textarea
-id="address"
+id="deliveryAddress"
 placeholder="Complete delivery address"
 ></textarea>
 
 </div>
 
 
-<div>
+<div class="field">
 
 <label>
-Preferred Date
+Delivery Date *
 </label>
 
 <input
-id="date"
 type="date"
+id="deliveryDate"
 >
 
 </div>
 
 
-<div>
+<div class="field">
 
 <label>
-Preferred Time
+Delivery Time *
 </label>
 
-<input
-id="time"
-type="time"
->
+<select id="deliveryTime">
+
+<option value="">
+Select time
+</option>
+
+<option>
+9:00 AM - 12:00 PM
+</option>
+
+<option>
+12:00 PM - 3:00 PM
+</option>
+
+<option>
+3:00 PM - 6:00 PM
+</option>
+
+<option>
+6:00 PM - 8:00 PM
+</option>
+
+</select>
 
 </div>
 
-</div>
 
-
-<!-- PAYMENT -->
-
-<div class="custom-box">
-
-<h3>
-💳 Preferred Payment Method
-</h3>
-
-<p class="note">
-
-Payment will be arranged after we confirm
-flower availability and current price.
-
-</p>
-
-
-<div class="option-grid"
-style="margin-top:15px;"
->
+<div class="field">
 
 <label>
-<input
-type="checkbox"
-name="payment"
-value="GCash"
->
+Gift Message
+</label>
+
+<textarea
+id="giftMessage"
+placeholder="Your message..."
+></textarea>
+
+</div>
+
+
+<div class="field">
+
+<label>
+Payment Method *
+</label>
+
+<select id="paymentMethod">
+
+<option value="">
+Select payment
+</option>
+
+<option>
 GCash
-</label>
+</option>
 
-
-<label>
-<input
-type="checkbox"
-name="payment"
-value="Maya"
->
+<option>
 Maya
-</label>
+</option>
 
+<option>
+Credit / Debit Card
+</option>
 
-<label>
-<input
-type="checkbox"
-name="payment"
-value="MariBank"
->
-MariBank
-</label>
+<option>
+Cash on Delivery
+</option>
 
-
-<label>
-<input
-type="checkbox"
-name="payment"
-value="GoTyme"
->
-GoTyme
-</label>
-
-
-<label>
-<input
-type="checkbox"
-name="payment"
-value="Bank Transfer"
->
-Bank Transfer
-</label>
+</select>
 
 </div>
-
-</div>
-
-
-<!-- SUMMARY -->
-
-<div
-id="summary"
-class="summary"
->
-
-<h3>
-Order Inquiry Summary
-</h3>
-
-<div id="summaryContent"></div>
-
-</div>
-
-
-<!-- BUTTONS -->
-
-<div
-style="
-text-align:center;
-margin-top:20px;
-"
->
-
-<button
-class="btn"
-type="button"
-onclick="showSummary()"
->
-Review Inquiry
-</button>
 
 
 <button
-class="btn"
-type="button"
-onclick="sendMessenger()"
+class="checkout-btn"
+onclick="placeOrder()"
 >
-💬 Send Inquiry on Messenger
+Place Order
 </button>
 
 </div>
 
-
-<p class="note">
-
-Your inquiry is not a payment transaction.
-We'll confirm the current price and availability first.
-
-</p>
-
 </div>
 
-</section>
+</div>
 
 </div>
 
 
-<!-- =========================
-     CONTACT PAGE
-========================= -->
+<!-- ================================
+     ADMIN LOGIN
+================================ -->
 
 <div
-id="contact"
-class="page"
+class="modal"
+id="adminLogin"
 >
 
-<section class="section">
+<div class="modal-content">
 
-<div class="section-title">
-
-<span>
-Get In Touch
-</span>
+<div class="modal-header">
 
 <h2>
-Contact Soleil Flower Store
+Admin Login
 </h2>
 
-</div>
-
-
-<div class="contact-box">
-
-<p>
-📍 <strong>Dangwa, Manila, Philippines</strong>
-</p>
-
-<p>
-🚚 Pickup & Delivery Only
-</p>
-
-<p>
-❌ No Walk-ins
-</p>
-
-<p>
-📞 <strong>09999767402</strong>
-</p>
-
-
-<br>
-
-
-<a
-class="btn"
-href="tel:09999767402"
+<button
+class="close"
+onclick="closeAdminLogin()"
 >
-📞 Call Us
-</a>
+×
+</button>
+
+</div>
 
 
-<a
-class="btn"
-href="https://m.me/soleilflowerstore"
-target="_blank"
+<div class="field">
+
+<label>
+Username
+</label>
+
+<input
+id="adminUsername"
+placeholder="admin"
 >
-💬 Messenger
-</a>
-
-</div>
-
-</section>
 
 </div>
 
 
-<!-- =========================
-     FOOTER
-========================= -->
+<div class="field">
 
-<footer>
+<label>
+Password
+</label>
 
-<p>
-Soleil Flower Store
+<input
+type="password"
+id="adminPassword"
+placeholder="Password"
+>
+
+</div>
+
+
+<button
+class="checkout-btn"
+onclick="loginAdmin()"
+>
+Login
+</button>
+
+
+<p
+style="
+margin-top:15px;
+font-size:12px;
+color:#777;
+"
+>
+Demo credentials:
+admin / flower123
 </p>
 
-<p>
-Dangwa, Manila, Philippines
-</p>
+</div>
 
-<p>
-09999767402
-</p>
+</div>
 
-<p>
-© 2026 Soleil Flower Store
-</p>
 
-</footer>
+<!-- TOAST -->
+
+<div
+class="toast"
+id="toast"
+>
+Added to cart.
+</div>
 
 
 <script>
 
-/* =========================
-   VARIABLES
-========================= */
+/* ========================================
+   INITIAL PRODUCT DATABASE
+======================================== */
 
-let cart=[];
+const defaultProducts = [
+
+{
+id:1,
+name:"Classic Red Roses",
+category:"romance",
+price:1299,
+cost:650,
+stock:50,
+image:"https://images.unsplash.com/photo-1548586196-aa5803b77379?auto=format&fit=crop&w=800&q=85",
+description:"Classic red roses arranged beautifully."
+},
+
+{
+id:2,
+name:"Pastel Birthday Bouquet",
+category:"birthday",
+price:999,
+cost:450,
+stock:30,
+image:"https://images.unsplash.com/photo-1523438885200-e635ba2c371e?auto=format&fit=crop&w=800&q=85",
+description:"Soft pastel flowers perfect for birthdays."
+},
+
+{
+id:3,
+name:"Graduation Blooms",
+category:"graduation",
+price:899,
+cost:400,
+stock:25,
+image:"https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=800&q=85",
+description:"Bright flowers to celebrate achievement."
+},
+
+{
+id:4,
+name:"Elegant White Arrangement",
+category:"sympathy",
+price:1499,
+cost:700,
+stock:20,
+image:"https://images.unsplash.com/photo-1508610048659-a06b669e3321?auto=format&fit=crop&w=800&q=85",
+description:"A graceful arrangement for meaningful moments."
+},
+
+{
+id:5,
+name:"Pink Anniversary Bouquet",
+category:"anniversary",
+price:1599,
+cost:750,
+stock:25,
+image:"https://images.unsplash.com/photo-1522057384400-681b421cfebc?auto=format&fit=crop&w=800&q=85",
+description:"Romantic pink flowers for anniversaries."
+},
+
+{
+id:6,
+name:"Sunshine Bouquet",
+category:"birthday",
+price:1099,
+cost:500,
+stock:30,
+image:"https://images.unsplash.com/photo-1507504031003-b417219a0fde?auto=format&fit=crop&w=800&q=85",
+description:"Bright flowers to bring happiness."
+},
+
+{
+id:7,
+name:"Sweet Romance",
+category:"romance",
+price:1799,
+cost:850,
+stock:15,
+image:"https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=85",
+description:"A romantic premium flower arrangement."
+},
+
+{
+id:8,
+name:"White Sympathy Flowers",
+category:"sympathy",
+price:1799,
+cost:850,
+stock:15,
+image:"https://images.unsplash.com/photo-1563241527-3004b7be0ffd?auto=format&fit=crop&w=800&q=85",
+description:"Tasteful flowers for expressing sympathy."
+}
+
+];
 
 
-/* =========================
-   SHOW PAGE
-========================= */
+/* ========================================
+   DATA
+======================================== */
 
-function showPage(page,button){
+let products =
+JSON.parse(
+localStorage.getItem("products")
+) || defaultProducts;
 
-document
-.querySelectorAll(".page")
-.forEach(function(item){
 
-item.classList.remove("active");
+let orders =
+JSON.parse(
+localStorage.getItem("orders")
+) || [];
+
+
+let customers =
+JSON.parse(
+localStorage.getItem("customers")
+) || [];
+
+
+let cart =
+JSON.parse(
+localStorage.getItem("cart")
+) || [];
+
+
+let category = "all";
+
+
+/* ========================================
+   SAVE
+======================================== */
+
+function save() {
+
+localStorage.setItem(
+"products",
+JSON.stringify(products)
+);
+
+localStorage.setItem(
+"orders",
+JSON.stringify(orders)
+);
+
+localStorage.setItem(
+"customers",
+JSON.stringify(customers)
+);
+
+localStorage.setItem(
+"cart",
+JSON.stringify(cart)
+);
+
+}
+
+
+/* ========================================
+   TOAST
+======================================== */
+
+function toast(message) {
+
+const element =
+document.getElementById("toast");
+
+element.textContent = message;
+
+element.classList.add("show");
+
+setTimeout(() => {
+
+element.classList.remove("show");
+
+},2500);
+
+}
+
+
+/* ========================================
+   PRODUCTS
+======================================== */
+
+function renderProducts() {
+
+const container =
+document.getElementById("products");
+
+const search =
+document.getElementById("search")
+.value
+.toLowerCase();
+
+
+const filtered =
+products.filter(product => {
+
+const categoryMatch =
+category === "all" ||
+product.category === category;
+
+const searchMatch =
+product.name
+.toLowerCase()
+.includes(search);
+
+return categoryMatch && searchMatch;
 
 });
 
 
+if(filtered.length === 0) {
+
+container.innerHTML =
+"<p>No flowers found.</p>";
+
+return;
+
+}
+
+
+container.innerHTML =
+filtered.map(product => `
+
+<div class="product">
+
+<img
+class="product-image"
+src="${product.image}"
+alt="${product.name}"
+>
+
+<div class="product-info">
+
+<span class="badge">
+${product.category}
+</span>
+
+<h3>
+${product.name}
+</h3>
+
+<p>
+${product.description}
+</p>
+
+<div class="stock">
+${product.stock > 0
+? `${product.stock} available`
+: "Out of stock"}
+</div>
+
+<div class="product-bottom">
+
+<span class="price">
+₱${product.price.toLocaleString()}
+</span>
+
+<button
+class="add"
+onclick="addToCart(${product.id})"
+${product.stock <= 0 ? "disabled" : ""}
+>
+${product.stock > 0 ? "＋ Add" : "Sold Out"}
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+`).join("");
+
+}
+
+
+function setCategory(value,button) {
+
+category = value;
+
 document
-.getElementById(page)
-.classList.add("active");
-
-
-document
-.querySelectorAll(".main-nav button")
-.forEach(function(item){
-
-item.classList.remove("active");
-
-});
-
-
-if(button){
+.querySelectorAll(".category")
+.forEach(b =>
+b.classList.remove("active")
+);
 
 button.classList.add("active");
 
-}
-
-
-window.scrollTo({
-top:0,
-behavior:"smooth"
-});
+renderProducts();
 
 }
 
 
-/* =========================
-   SHOW PAGE BY NAME
-========================= */
+/* ========================================
+   CART
+======================================== */
 
-function showPageByName(page){
+function addToCart(id) {
 
-showPage(page,null);
+const product =
+products.find(p => p.id === id);
 
-}
+if(!product || product.stock <= 0) {
 
-
-/* =========================
-   CHOOSE FLOWER
-========================= */
-
-function chooseFlower(flowerName){
-
-/*
-Select the flower
-automatically.
-*/
-
-document.getElementById("flower").value=
-flowerName;
-
-
-/*
-Show selected flower.
-*/
-
-document.getElementById(
-"selectedFlowerName"
-).textContent=
-flowerName;
-
-
-document.getElementById(
-"selectedFlower"
-).style.display=
-"block";
-
-
-/*
-Go directly to inquiry.
-*/
-
-showPageByName("inquiry");
-
-
-/*
-Scroll to top of inquiry.
-*/
-
-window.scrollTo({
-top:0,
-behavior:"smooth"
-});
-
-}
-
-
-/* =========================
-   FLOWER SELECT CHANGED
-========================= */
-
-document
-.getElementById("flower")
-.addEventListener(
-"change",
-function(){
-
-if(this.value){
-
-document.getElementById(
-"selectedFlowerName"
-).textContent=
-this.value;
-
-document.getElementById(
-"selectedFlower"
-).style.display=
-"block";
-
-}
-
-});
-
-
-/* =========================
-   ADD TO CART
-========================= */
-
-function addToCart(){
-
-const flower=
-document.getElementById(
-"flower"
-).value;
-
-
-if(!flower){
-
-alert(
-"Please select a flower first."
-);
+toast("This product is unavailable.");
 
 return;
 
 }
 
 
-const item={
-
-flower:flower,
-
-quantity:
-document.getElementById(
-"quantity"
-).value,
-
-color:
-document.getElementById(
-"color"
-).value,
-
-wrapper:
-document.getElementById(
-"wrapper"
-).value,
-
-ribbon:
-document.getElementById(
-"ribbon"
-).value,
-
-occasion:
-document.getElementById(
-"occasion"
-).value,
-
-card:
-document.getElementById(
-"cardMessage"
-).value,
-
-special:
-document.getElementById(
-"specialRequest"
-).value
-
-};
+const item =
+cart.find(i => i.id === id);
 
 
-cart.push(item);
+if(item) {
 
+if(item.quantity >= product.stock) {
+
+toast("Not enough stock.");
+
+return;
+
+}
+
+item.quantity++;
+
+} else {
+
+cart.push({
+id:id,
+quantity:1
+});
+
+}
+
+
+save();
 
 renderCart();
 
-
-alert(
-flower+
-" has been added to your inquiry cart 🌸"
+toast(
+`${product.name} added to cart.`
 );
 
 }
 
 
-/* =========================
-   RENDER CART
-========================= */
+function changeQuantity(id,amount) {
 
-function renderCart(){
+const item =
+cart.find(i => i.id === id);
 
-const container=
-document.getElementById(
-"cartItems"
+const product =
+products.find(p => p.id === id);
+
+if(!item || !product) return;
+
+
+item.quantity += amount;
+
+
+if(item.quantity > product.stock) {
+
+item.quantity = product.stock;
+
+toast("Maximum available stock reached.");
+
+}
+
+
+if(item.quantity <= 0) {
+
+cart =
+cart.filter(i => i.id !== id);
+
+}
+
+
+save();
+
+renderCart();
+
+}
+
+
+function removeCartItem(id) {
+
+cart =
+cart.filter(i => i.id !== id);
+
+save();
+
+renderCart();
+
+}
+
+
+function renderCart() {
+
+const container =
+document.getElementById("cartItems");
+
+
+const count =
+cart.reduce(
+(sum,item) => sum + item.quantity,
+0
 );
 
+document.getElementById(
+"cartCount"
+).textContent = count;
 
-if(cart.length===0){
 
-container.innerHTML=
+if(cart.length === 0) {
+
+container.innerHTML =
 `
-<p class="empty">
-Your inquiry cart is empty.
+<p style="color:#777">
+Your cart is empty.
 </p>
 `;
+
+document.getElementById(
+"subtotal"
+).textContent = "0";
+
+document.getElementById(
+"delivery"
+).textContent = "0";
+
+document.getElementById(
+"total"
+).textContent = "0";
 
 return;
 
 }
 
 
-container.innerHTML="";
+let subtotal = 0;
 
 
-cart.forEach(
-function(item,index){
+container.innerHTML =
+cart.map(item => {
 
-const div=
-document.createElement("div");
+const product =
+products.find(
+p => p.id === item.id
+);
+
+if(!product) return "";
 
 
-div.className=
-"cart-item";
+const lineTotal =
+product.price *
+item.quantity;
+
+subtotal += lineTotal;
 
 
-div.innerHTML=`
+return `
+
+<div class="cart-item">
+
+<img
+src="${product.image}"
+alt="${product.name}"
+>
+
+<div class="cart-info">
+
+<strong>
+${product.name}
+</strong>
+
+<div>
+₱${product.price.toLocaleString()}
+</div>
+
+<div class="quantity">
+
+<button
+onclick="changeQuantity(${item.id},-1)"
+>
+−
+</button>
+
+<span>
+${item.quantity}
+</span>
+
+<button
+onclick="changeQuantity(${item.id},1)"
+>
+＋
+</button>
+
+</div>
 
 <button
 class="remove"
-onclick="removeItem(${index})"
+onclick="removeCartItem(${item.id})"
 >
 Remove
 </button>
 
-<strong>
-${item.flower}
-</strong>
+</div>
 
-<br>
-
-Quantity:
-${item.quantity}
-
-<br>
-
-Color:
-${item.color}
-
-<br>
-
-Wrapper:
-${item.wrapper}
-
-<br>
-
-Ribbon:
-${item.ribbon}
-
-<br>
-
-Occasion:
-${item.occasion}
+</div>
 
 `;
 
+}).join("");
 
-container.appendChild(div);
 
-});
+const delivery =
+subtotal > 0 ? 100 : 0;
+
+document.getElementById(
+"subtotal"
+).textContent =
+subtotal.toLocaleString();
+
+document.getElementById(
+"delivery"
+).textContent =
+delivery.toLocaleString();
+
+document.getElementById(
+"total"
+).textContent =
+(subtotal + delivery)
+.toLocaleString();
 
 }
 
 
-/* =========================
-   REMOVE CART ITEM
-========================= */
+function openCart() {
 
-function removeItem(index){
-
-cart.splice(index,1);
+document
+.getElementById("cartOverlay")
+.classList.add("active");
 
 renderCart();
 
 }
 
 
-/* =========================
-   GET PAYMENT METHODS
-========================= */
+function closeCart() {
 
-function getPayments(){
-
-const selected=
-document.querySelectorAll(
-'input[name="payment"]:checked'
-);
-
-
-let payments=[];
-
-
-selected.forEach(
-function(item){
-
-payments.push(item.value);
-
-});
-
-
-return payments.length
-?payments.join(", ")
-:"To be discussed";
+document
+.getElementById("cartOverlay")
+.classList.remove("active");
 
 }
 
 
-/* =========================
-   SHOW SUMMARY
-========================= */
+function showCheckout() {
 
-function showSummary(){
+if(cart.length === 0) {
 
-if(cart.length===0){
+toast("Your cart is empty.");
 
-alert(
-"Please add at least one flower to your inquiry cart."
+return;
+
+}
+
+document
+.getElementById("checkoutForm")
+.classList.remove("hidden");
+
+}
+
+
+/* ========================================
+   CHECKOUT
+======================================== */
+
+function placeOrder() {
+
+if(cart.length === 0) {
+
+toast("Your cart is empty.");
+
+return;
+
+}
+
+
+const customerName =
+document.getElementById(
+"customerName"
+).value.trim();
+
+const customerPhone =
+document.getElementById(
+"customerPhone"
+).value.trim();
+
+const recipientName =
+document.getElementById(
+"recipientName"
+).value.trim();
+
+const recipientPhone =
+document.getElementById(
+"recipientPhone"
+).value.trim();
+
+const address =
+document.getElementById(
+"deliveryAddress"
+).value.trim();
+
+const date =
+document.getElementById(
+"deliveryDate"
+).value;
+
+const time =
+document.getElementById(
+"deliveryTime"
+).value;
+
+const message =
+document.getElementById(
+"giftMessage"
+).value.trim();
+
+const payment =
+document.getElementById(
+"paymentMethod"
+).value;
+
+
+if(
+!customerName ||
+!customerPhone ||
+!recipientName ||
+!recipientPhone ||
+!address ||
+!date ||
+!time ||
+!payment
+) {
+
+toast(
+"Please complete all required fields."
 );
 
 return;
@@ -2267,434 +2381,624 @@ return;
 }
 
 
-const name=
-document.getElementById(
-"customerName"
-).value;
+let subtotal = 0;
+
+const items = [];
 
 
-const phone=
-document.getElementById(
-"customerPhone"
-).value;
+for(const cartItem of cart) {
+
+const product =
+products.find(
+p => p.id === cartItem.id
+);
+
+if(!product) continue;
 
 
-const orderType=
-document.getElementById(
-"orderType"
-).value;
+if(cartItem.quantity > product.stock) {
+
+toast(
+`Not enough stock for ${product.name}.`
+);
+
+return;
+
+}
 
 
-const delivery=
-document.getElementById(
-"deliveryService"
-).value;
+const lineTotal =
+product.price *
+cartItem.quantity;
+
+subtotal += lineTotal;
 
 
-const address=
-document.getElementById(
-"address"
-).value;
+items.push({
 
+productId:product.id,
 
-const date=
-document.getElementById(
-"date"
-).value;
+name:product.name,
 
+quantity:cartItem.quantity,
 
-const time=
-document.getElementById(
-"time"
-).value;
+price:product.price,
 
-
-let html="";
-
-
-html+=`
-
-<p>
-<strong>Customer:</strong>
-${name || "Not provided"}
-</p>
-
-<p>
-<strong>Contact:</strong>
-${phone || "Not provided"}
-</p>
-
-<br>
-
-`;
-
-
-cart.forEach(
-function(item,index){
-
-html+=`
-
-<p>
-
-<strong>
-${index+1}.
-${item.flower}
-</strong>
-
-<br>
-
-Quantity:
-${item.quantity}
-
-<br>
-
-Flower Color:
-${item.color}
-
-<br>
-
-Wrapper:
-${item.wrapper}
-
-<br>
-
-Ribbon:
-${item.ribbon}
-
-<br>
-
-Occasion:
-${item.occasion}
-
-</p>
-
-<br>
-
-`;
+total:lineTotal
 
 });
 
+}
 
-html+=`
 
-<p>
-<strong>
-Order Type:
-</strong>
+const deliveryFee = 100;
 
-${orderType}
+const total =
+subtotal + deliveryFee;
 
-</p>
 
-<p>
-<strong>
-Delivery Service:
-</strong>
+const orderNumber =
+"BP-" +
+Date.now()
+.toString()
+.slice(-7);
 
-${delivery}
 
-</p>
+const order = {
 
-<p>
-<strong>
-Address:
-</strong>
+id:Date.now(),
 
-${address || "Not applicable"}
+orderNumber,
 
-</p>
+customerName,
 
-<p>
-<strong>
-Date:
-</strong>
+customerPhone,
 
-${date || "To be discussed"}
+recipientName,
 
-</p>
+recipientPhone,
 
-<p>
-<strong>
-Time:
-</strong>
+address,
 
-${time || "To be discussed"}
+date,
 
-</p>
+time,
 
-<p>
-<strong>
+message,
+
+payment,
+
+items,
+
+subtotal,
+
+deliveryFee,
+
+total,
+
+status:"pending",
+
+createdAt:
+new Date().toISOString()
+
+};
+
+
+orders.unshift(order);
+
+
+/* CUSTOMER */
+
+let customer =
+customers.find(
+c => c.phone === customerPhone
+);
+
+
+if(!customer) {
+
+customer = {
+
+id:Date.now(),
+
+name:customerName,
+
+phone:customerPhone,
+
+orders:0,
+
+spent:0
+
+};
+
+customers.push(customer);
+
+}
+
+
+customer.orders++;
+
+customer.spent += total;
+
+
+/* INVENTORY */
+
+for(const item of items) {
+
+const product =
+products.find(
+p => p.id === item.productId
+);
+
+if(product) {
+
+product.stock -=
+item.quantity;
+
+}
+
+}
+
+
+save();
+
+
+cart = [];
+
+save();
+
+
+document
+.getElementById("checkoutForm")
+.classList.add("hidden");
+
+
+document
+.querySelectorAll(
+"#checkoutForm input, #checkoutForm textarea"
+)
+.forEach(element =>
+element.value = ""
+);
+
+
+document
+.getElementById("deliveryTime")
+.value = "";
+
+document
+.getElementById("paymentMethod")
+.value = "";
+
+
+renderCart();
+
+renderProducts();
+
+closeCart();
+
+
+alert(
+
+`ORDER CONFIRMED
+
+Order #: ${orderNumber}
+
+Customer:
+${customerName}
+
+Recipient:
+${recipientName}
+
+Delivery:
+${date}
+${time}
+
+Total:
+₱${total.toLocaleString()}
+
 Payment:
-</strong>
+${payment}
 
-${getPayments()}
+Thank you for ordering from Bloom & Petals!`
 
-</p>
-
-<br>
-
-<p>
-
-<strong>
-Price:
-</strong>
-
-To be confirmed after checking
-current flower availability.
-
-</p>
-
-`;
-
-
-document.getElementById(
-"summaryContent"
-).innerHTML=
-html;
-
-
-document.getElementById(
-"summary"
-).style.display=
-"block";
-
-}
-
-
-/* =========================
-   SEND TO MESSENGER
-========================= */
-
-function sendMessenger(){
-
-if(cart.length===0){
-
-alert(
-"Please add at least one flower to your inquiry cart."
 );
 
-return;
+}
+
+
+/* ========================================
+   ADMIN LOGIN
+======================================== */
+
+function openAdminLogin() {
+
+document
+.getElementById("adminLogin")
+.classList.add("active");
 
 }
 
 
-const name=
-document.getElementById(
-"customerName"
-).value;
+function closeAdminLogin() {
 
-
-const phone=
-document.getElementById(
-"customerPhone"
-).value;
-
-
-const orderType=
-document.getElementById(
-"orderType"
-).value;
-
-
-const delivery=
-document.getElementById(
-"deliveryService"
-).value;
-
-
-const address=
-document.getElementById(
-"address"
-).value;
-
-
-const date=
-document.getElementById(
-"date"
-).value;
-
-
-const time=
-document.getElementById(
-"time"
-).value;
-
-
-let message=
-"🌸 HELLO SOLEIL FLOWER STORE!\n\n";
-
-
-message+=
-"I would like to make an inquiry.\n\n";
-
-
-message+=
-"👤 Name: "+
-(name || "Not provided")+
-"\n";
-
-
-message+=
-"📞 Contact: "+
-(phone || "Not provided")+
-"\n\n";
-
-
-message+=
-"💐 FLOWER REQUEST:\n";
-
-
-cart.forEach(
-function(item,index){
-
-message+=
-"\n"+
-(index+1)+
-". "+
-item.flower+
-"\n";
-
-message+=
-"Quantity: "+
-item.quantity+
-"\n";
-
-message+=
-"Color: "+
-item.color+
-"\n";
-
-message+=
-"Wrapper: "+
-item.wrapper+
-"\n";
-
-message+=
-"Ribbon: "+
-item.ribbon+
-"\n";
-
-message+=
-"Occasion: "+
-item.occasion+
-"\n";
-
-
-if(item.card){
-
-message+=
-"Card Message: "+
-item.card+
-"\n";
+document
+.getElementById("adminLogin")
+.classList.remove("active");
 
 }
 
 
-if(item.special){
+function loginAdmin() {
 
-message+=
-"Special Request: "+
-item.special+
-"\n";
+const username =
+document.getElementById(
+"adminUsername"
+).value;
 
-}
-
-});
-
-
-message+=
-"\n📦 Order Type: "+
-orderType+
-"\n";
-
-
-message+=
-"🚚 Delivery Service: "+
-delivery+
-"\n";
-
-
-message+=
-"📍 Address: "+
-(address || "Not applicable")+
-"\n";
-
-
-message+=
-"📅 Date: "+
-(date || "To be discussed")+
-"\n";
-
-
-message+=
-"⏰ Time: "+
-(time || "To be discussed")+
-"\n";
-
-
-message+=
-"💳 Payment: "+
-getPayments()+
-"\n\n";
-
-
-message+=
-"💰 Please send me the current price and availability.\n\n";
-
-
-message+=
-"Thank you! 🌷";
+const password =
+document.getElementById(
+"adminPassword"
+).value;
 
 
 /*
-Copy inquiry,
-then open Messenger.
+IMPORTANT:
+This is ONLY a local prototype login.
+For a real deployment, authentication
+must be handled server-side.
 */
 
-if(navigator.clipboard){
+if(
+username === "admin" &&
+password === "flower123"
+) {
 
-navigator.clipboard
-.writeText(message)
-.then(function(){
-
-alert(
-"Your inquiry has been copied! 🌸\n\n"+
-"Messenger will open next. "+
-"Please paste the inquiry into the chat."
+localStorage.setItem(
+"adminLoggedIn",
+"true"
 );
 
-window.open(
-"https://m.me/soleilflowerstore",
-"_blank"
+closeAdminLogin();
+
+showAdmin();
+
+toast("Admin login successful.");
+
+} else {
+
+toast("Incorrect username or password.");
+
+}
+
+}
+
+
+function logoutAdmin() {
+
+localStorage.removeItem(
+"adminLoggedIn"
 );
 
-})
-.catch(function(){
+document
+.getElementById("admin")
+.classList.add("hidden");
 
-window.open(
-"https://m.me/soleilflowerstore",
-"_blank"
-);
-
+window.scrollTo({
+top:0,
+behavior:"smooth"
 });
 
-}else{
+}
 
-window.open(
-"https://m.me/soleilflowerstore",
-"_blank"
+
+function showAdmin() {
+
+if(
+localStorage.getItem(
+"adminLoggedIn"
+) !== "true"
+) {
+
+return;
+
+}
+
+document
+.getElementById("admin")
+.classList.remove("hidden");
+
+renderDashboard();
+
+document
+.getElementById("admin")
+.scrollIntoView({
+behavior:"smooth"
+});
+
+}
+
+
+/* ========================================
+   DASHBOARD
+======================================== */
+
+function renderDashboard() {
+
+const sales =
+orders
+.filter(o =>
+o.status !== "cancelled"
+)
+.reduce(
+(sum,o) => sum + o.total,
+0
+);
+
+
+document.getElementById(
+"statSales"
+).textContent =
+"₱" +
+sales.toLocaleString();
+
+
+document.getElementById(
+"statOrders"
+).textContent =
+orders.length;
+
+
+document.getElementById(
+"statProducts"
+).textContent =
+products.length;
+
+
+document.getElementById(
+"statCustomers"
+).textContent =
+customers.length;
+
+
+/* ORDERS */
+
+const orderTable =
+document.getElementById(
+"ordersTable"
+);
+
+
+if(orders.length === 0) {
+
+orderTable.innerHTML =
+`
+<tr>
+<td colspan="4">
+No orders yet.
+</td>
+</tr>
+`;
+
+} else {
+
+orderTable.innerHTML =
+orders.slice(0,20)
+.map(order => `
+
+<tr>
+
+<td>
+<strong>
+${order.orderNumber}
+</strong>
+</td>
+
+<td>
+${order.customerName}
+</td>
+
+<td>
+₱${order.total.toLocaleString()}
+</td>
+
+<td>
+
+<select
+class="admin-select"
+onchange="
+changeOrderStatus(
+${order.id},
+this.value
+)
+"
+>
+
+${[
+"pending",
+"confirmed",
+"preparing",
+"ready",
+"out_for_delivery",
+"delivered",
+"cancelled"
+]
+.map(status => `
+
+<option
+value="${status}"
+${order.status === status ? "selected" : ""}
+>
+${formatStatus(status)}
+</option>
+
+`).join("")}
+
+</select>
+
+</td>
+
+</tr>
+
+`).join("");
+
+}
+
+
+/* INVENTORY */
+
+const inventoryTable =
+document.getElementById(
+"inventoryTable"
+);
+
+
+inventoryTable.innerHTML =
+products.map(product => `
+
+<tr>
+
+<td>
+${product.name}
+</td>
+
+<td>
+
+<span
+class="status ${
+product.stock <= 5
+? "cancelled"
+: product.stock <= 15
+? "pending"
+: "delivered"
+}"
+>
+${product.stock}
+</span>
+
+</td>
+
+<td>
+₱${product.price.toLocaleString()}
+</td>
+
+</tr>
+
+`).join("");
+
+
+/* CUSTOMERS */
+
+const customerTable =
+document.getElementById(
+"customersTable"
+);
+
+
+if(customers.length === 0) {
+
+customerTable.innerHTML =
+`
+<tr>
+<td colspan="4">
+No customers yet.
+</td>
+</tr>
+`;
+
+} else {
+
+customerTable.innerHTML =
+customers.map(customer => `
+
+<tr>
+
+<td>
+${customer.name}
+</td>
+
+<td>
+${customer.phone}
+</td>
+
+<td>
+${customer.orders}
+</td>
+
+<td>
+₱${customer.spent.toLocaleString()}
+</td>
+
+</tr>
+
+`).join("");
+
+}
+
+}
+
+
+function formatStatus(status) {
+
+return status
+.replaceAll("_"," ")
+.replace(/\b\w/g,
+letter =>
+letter.toUpperCase()
 );
 
 }
 
+
+function changeOrderStatus(
+id,
+status
+) {
+
+const order =
+orders.find(
+o => o.id === id
+);
+
+if(!order) return;
+
+order.status = status;
+
+save();
+
+renderDashboard();
+
+toast(
+`${order.orderNumber} → ${formatStatus(status)}`
+);
+
 }
 
 
-/* =========================
-   INITIALIZE
-========================= */
+/* ========================================
+   START
+======================================== */
+
+document.addEventListener(
+"DOMContentLoaded",
+() => {
+
+renderProducts();
 
 renderCart();
+
+if(
+localStorage.getItem(
+"adminLoggedIn"
+) === "true"
+) {
+
+showAdmin();
+
+}
+
+}
+);
 
 </script>
 
